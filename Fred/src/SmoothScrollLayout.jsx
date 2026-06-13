@@ -22,9 +22,9 @@ export default function SmoothScrollLayout({ children }) {
     const onResize = () => {
       setIsLenisEnabled(getLenisState());
 
-      // Ensure layout/scroll metrics are recalculated to prevent scrollbar glitches
+      // Keep Lenis scroll measurements in sync with layout changes
       if (lenisRef.current) {
-        lenisRef.current.update();
+        lenisRef.current.resize();
       }
     };
 
@@ -63,7 +63,8 @@ export default function SmoothScrollLayout({ children }) {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
-      smoothWheel: true,
+      // Prevents the “double scrollbar / scrollbar gutter” effect on desktop
+      smoothWheel: false,
       wheelMultiplier: 1,
     });
 
@@ -74,10 +75,6 @@ export default function SmoothScrollLayout({ children }) {
       if (!lenisRef.current) return;
 
       lenisRef.current.raf(time);
-
-      // Keep scroll metrics in sync with the browser during smooth scroll
-      // (helps avoid the "second scrollbar" disappearing until bottom).
-      lenisRef.current.update();
 
       rafIdRef.current = requestAnimationFrame(raf);
     };
@@ -90,8 +87,6 @@ export default function SmoothScrollLayout({ children }) {
         rafIdRef.current = null;
       }
       if (lenisRef.current) {
-        // Final recalculation before teardown
-        lenisRef.current.update();
         lenisRef.current.destroy();
         lenisRef.current = null;
       }
