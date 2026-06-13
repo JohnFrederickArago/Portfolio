@@ -94,7 +94,6 @@ function Header() {
           viewport={viewport2}
         >
           <div></div>
-
           <ul className="nav-links">
             <motion.li variants={childVariants}>
               <NavLink to="/">Home</NavLink>

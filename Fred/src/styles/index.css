@@ -34,7 +34,7 @@
   --color-muted: #adb5bd;
 
   /* Spacing */
-  --page-padding: calc(1px + 1.2vw) calc(1px + 2vw);
+  --page-padding: calc(2px + 1.2vw) calc(1px + 2vw);
 
   /* Typography */
   --base-font-size: 0.92rem;
@@ -54,21 +54,13 @@
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-#root {
-  width: 100%;
-  max-width: 100%;
-}
-
-.app-root,
-main.container {
-  width: 100%;
-  max-width: 100%;
 }

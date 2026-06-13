@@ -78,22 +78,20 @@
 /* Actual text scaling */
 .hero .hero-text span {
   display: inline-block;
+  max-width: 100%;
 
   font-family: var(--font-medium), sans-serif;
   white-space: nowrap;
 
-  /* KEY: responsive scaling that behaves consistently across browsers */
-  font-size: clamp(3rem, 16.92vw, 22.6rem);
-
-  /* optional polish for cinematic look */
-  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 17vw, 21.3rem);
 }
 
 /* Hamburger Menu */
 .off-screen-menu {
   background-color: var(--color-text-dark);
+  left: 0;
+  right: 0;
   height: 50vh;
-  width: 100%;
   position: absolute;
   top: -1000px;
   display: flex;
@@ -220,10 +218,10 @@ nav img {
 
 hr {
   border: none;
-  width: 100%;
+  width: 100vw;
   border-top: 1px solid #adb5bd5e;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .work-list {
@@ -285,8 +283,8 @@ hr {
 }
 
 .work-preview-content-image img {
-  width: 60rem;
-  max-width: 100%;
+  max-width: 60rem;
+  width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
@@ -356,7 +354,8 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 60rem;
+  width: 100%;
+  max-width: 60rem;
 }
 
 .right-container p {
@@ -519,9 +518,14 @@ hr {
 @media (min-width: 1025px) and (max-width: 1600px) {
   /* Header */
   .hero .hero-text {
-    top: 62%;
+    top: 60%;
   }
 
+  .hero .hero-text span {
+    font-size: clamp(3rem, 16.3vw, 17rem);
+  }
+
+  /* Works */
   .work-preview-content-image img {
     width: 50rem;
   }
