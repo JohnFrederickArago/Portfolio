@@ -7,9 +7,11 @@ import "./styles/index.css";
 import "./styles/home.css";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <SmoothScrollLayout>
-      <App />
-    </SmoothScrollLayout>
-  </BrowserRouter>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <SmoothScrollLayout>
+        <App />
+      </SmoothScrollLayout>
+    </BrowserRouter>
+  </React.StrictMode>,
 );

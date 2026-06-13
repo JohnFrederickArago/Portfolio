@@ -1,19 +1,35 @@
-import { useEffect, useRef } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Lenis from "lenis";
 
 export default function SmoothScrollLayout({ children }) {
-  const prefersReducedMotion = useReducedMotion();
+  const getLenisState = () => {
+    if (typeof window === "undefined") return false;
 
-  const lenisRef = useRef(null);
-  const rafIdRef = useRef(null);
+    // PRO RULE: disable Lenis on tablets (portrait + landscape)
+    const isTablet = window.matchMedia(
+      "(min-width: 768px) and (max-width: 1366px)",
+    ).matches;
+
+    return !isTablet;
+  };
+
+  const [isLenisEnabled, setIsLenisEnabled] = useState(getLenisState);
 
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    const onResize = () => {
+      setIsLenisEnabled(getLenisState());
+    };
 
-    // Prevent double-init (React strict mode removed in main.jsx,
-    // but this is a safe guard for future dev/prod differences).
-    if (lenisRef.current) return;
+    window.addEventListener("resize", onResize, { passive: true });
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isLenisEnabled) return;
 
     const lenis = new Lenis({
       duration: 1.2,
@@ -24,39 +40,29 @@ export default function SmoothScrollLayout({ children }) {
       wheelMultiplier: 1,
     });
 
-    lenisRef.current = lenis;
+    let rafId;
+    let isMounted = true;
 
     const raf = (time) => {
-      if (!lenisRef.current) return;
-
-      lenisRef.current.raf(time);
-
-      rafIdRef.current = requestAnimationFrame(raf);
+      if (!isMounted) return;
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
     };
 
-    rafIdRef.current = requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
-      if (rafIdRef.current) {
-        cancelAnimationFrame(rafIdRef.current);
-        rafIdRef.current = null;
-      }
-      if (lenisRef.current) {
-        lenisRef.current.destroy();
-        lenisRef.current = null;
-      }
+      isMounted = false;
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
     };
-  }, [prefersReducedMotion]);
-
-  if (prefersReducedMotion) {
-    return <>{children}</>;
-  }
+  }, [isLenisEnabled]);
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       {children}
     </motion.div>
