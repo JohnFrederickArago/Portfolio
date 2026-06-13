@@ -515,7 +515,7 @@ hr {
 }
 
 /* Desktop */
-@media (min-width: 1025px) and (max-width: 2560px) {
+@media (min-width: 1025px) and (max-width: 1600px) {
   /* Header */
   .hero .hero-text {
     top: 62%;
