@@ -89,18 +89,10 @@ function Header() {
           <div></div>
 
           <ul className="nav-links">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/works">Works</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
+            <li>Home</li>
+            <li>Works</li>
+            <li>About</li>
+            <li>Contact</li>
           </ul>
           <div className="timePlace">
             <p>
@@ -141,9 +133,7 @@ function Header() {
             }}
           />
 
-          <div className="hero-text">
-            <span>FRED ARAGO</span>
-          </div>
+          <h1 className="hero-text">FRED ARAGO</h1>
         </div>
       </header>
     </>
