@@ -89,10 +89,18 @@ function Header() {
           <div></div>
 
           <ul className="nav-links">
-            <li>Home</li>
-            <li>Works</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/works">Works</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
           </ul>
           <div className="timePlace">
             <p>

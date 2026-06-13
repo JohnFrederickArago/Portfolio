@@ -47,7 +47,7 @@ function Works() {
                   whileInView="visible"
                   viewport={viewport}
                 >
-                  01
+                  <span className="number">01</span>
                 </motion.p>
                 <motion.p
                   variants={childVariants}
@@ -90,7 +90,7 @@ function Works() {
               </motion.div>
 
               <motion.p className="year-created" variants={childVariants}>
-                <span className="year-span">202</span>6
+                2026
               </motion.p>
             </motion.div>
           </div>
@@ -143,7 +143,7 @@ function Works() {
               </motion.div>
 
               <motion.p className="year-created" variants={childVariants}>
-                <span className="year-span">202</span>6
+                2026
               </motion.p>
             </motion.div>
           </div>
@@ -195,7 +195,7 @@ function Works() {
               </motion.div>
 
               <motion.p className="year-created" variants={childVariants}>
-                <span className="year-span">202</span>5
+                2025
               </motion.p>
             </motion.div>
           </div>
@@ -250,7 +250,7 @@ function Works() {
               </motion.div>
 
               <motion.p className="year-created" variants={childVariants}>
-                <span className="year-span">202</span>5
+                2025
               </motion.p>
             </motion.div>
           </div>
@@ -301,7 +301,7 @@ function Works() {
               </motion.div>
 
               <motion.p className="year-created" variants={childVariants}>
-                <span className="year-span">202</span>5
+                2025
               </motion.p>
             </motion.div>
           </div>
@@ -355,7 +355,7 @@ function Works() {
               </motion.div>
 
               <motion.p className="year-created" variants={childVariants}>
-                <span className="year-span">202</span>4
+                2024
               </motion.p>
             </motion.div>
           </div>

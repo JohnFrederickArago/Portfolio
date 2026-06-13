@@ -1,19 +1,46 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Lenis from "lenis";
 
 export default function SmoothScrollLayout({ children }) {
+  const getLenisState = () => {
+    if (typeof window === "undefined") return false;
+
+    // PRO RULE: disable Lenis on tablets (portrait + landscape)
+    const isTablet = window.matchMedia(
+      "(min-width: 768px) and (max-width: 1366px)",
+    ).matches;
+
+    return !isTablet;
+  };
+
+  const [isLenisEnabled, setIsLenisEnabled] = useState(getLenisState);
+
   useEffect(() => {
+    const onResize = () => {
+      setIsLenisEnabled(getLenisState());
+    };
+
+    window.addEventListener("resize", onResize, { passive: true });
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isLenisEnabled) return;
+
     const lenis = new Lenis({
-      duration: 1.2, // Time taken to complete the scroll animation (in seconds)
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Physics easing curve
-      orientation: "vertical", // 'vertical' or 'horizontal'
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
       gestureOrientation: "vertical",
-      smoothWheel: true, // Targets and smooths out mouse wheels
-      wheelMultiplier: 1, // Speeds up or slows down scroll sensitivity
+      smoothWheel: true,
+      wheelMultiplier: 1,
     });
 
-    let rafId = 0;
+    let rafId;
     let isMounted = true;
 
     const raf = (time) => {
@@ -26,10 +53,10 @@ export default function SmoothScrollLayout({ children }) {
 
     return () => {
       isMounted = false;
-      if (rafId) cancelAnimationFrame(rafId);
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
-  }, []);
+  }, [isLenisEnabled]);
 
   return (
     <motion.div
