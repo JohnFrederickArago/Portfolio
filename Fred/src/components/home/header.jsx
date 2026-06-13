@@ -37,7 +37,8 @@ function Header() {
     };
   }, []);
 
-  const viewport = { once: false, margin: "-70px 0px -10px 0px" };
+  const viewport = { once: true, margin: "-70px 0px -10px 0px" };
+  const viewport2 = { once: false, margin: "-70px 0px -10px 0px" };
 
   return (
     <>
@@ -85,36 +86,46 @@ function Header() {
           <div className="placeholder"></div>
         </motion.nav>
 
-        <div className="off-screen-menu">
+        <motion.div
+          className="off-screen-menu"
+          variants={staggerParent}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport2}
+        >
           <div></div>
 
           <ul className="nav-links">
-            <li>
+            <motion.li variants={childVariants}>
               <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={childVariants}>
               <NavLink to="/works">Works</NavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={childVariants}>
               <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={childVariants}>
               <NavLink to="/contact">Contact</NavLink>
-            </li>
+            </motion.li>
           </ul>
           <div className="timePlace">
-            <p>
+            <motion.p variants={childVariants}>
               {time.toLocaleTimeString("en-US", {
                 hour: "2-digit",
                 minute: "2-digit",
                 hour12: false,
                 timeZone: "Asia/Dubai",
               })}
-            </p>
-            <p>Dubai, United Arab Emirates</p>
+            </motion.p>
+            <motion.p variants={childVariants}>
+              Dubai, United Arab Emirates
+            </motion.p>
           </div>
-          <div className="role">{"(Multimedia Designer)"}</div>
-        </div>
+          <motion.div className="role" variants={childVariants}>
+            {"(Multimedia Designer)"}
+          </motion.div>
+        </motion.div>
 
         <nav>
           <div className="logo-menu">

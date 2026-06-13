@@ -12,7 +12,7 @@ function Services() {
     "experiences from concept to execution.",
   ];
 
-  const viewport = { once: false, margin: "-70px 0px -10px 0px" };
+  const viewport = { once: true, margin: "-70px 0px -10px 0px" };
 
   return (
     <div className="services-container" data-reveal>
