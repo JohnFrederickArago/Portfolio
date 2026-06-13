@@ -21,6 +21,11 @@ export default function SmoothScrollLayout({ children }) {
   useEffect(() => {
     const onResize = () => {
       setIsLenisEnabled(getLenisState());
+
+      // Ensure layout/scroll metrics are recalculated to prevent scrollbar glitches
+      if (lenisRef.current) {
+        lenisRef.current.update();
+      }
     };
 
     window.addEventListener("resize", onResize, { passive: true });
@@ -69,6 +74,11 @@ export default function SmoothScrollLayout({ children }) {
       if (!lenisRef.current) return;
 
       lenisRef.current.raf(time);
+
+      // Keep scroll metrics in sync with the browser during smooth scroll
+      // (helps avoid the "second scrollbar" disappearing until bottom).
+      lenisRef.current.update();
+
       rafIdRef.current = requestAnimationFrame(raf);
     };
 
@@ -80,6 +90,8 @@ export default function SmoothScrollLayout({ children }) {
         rafIdRef.current = null;
       }
       if (lenisRef.current) {
+        // Final recalculation before teardown
+        lenisRef.current.update();
         lenisRef.current.destroy();
         lenisRef.current = null;
       }
