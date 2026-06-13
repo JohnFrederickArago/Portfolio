@@ -133,7 +133,9 @@ function Header() {
             }}
           />
 
-          <h1 className="hero-text">FRED ARAGO</h1>
+          <div className="hero-text">
+            <span>FRED ARAGO</span>
+          </div>
         </div>
       </header>
     </>

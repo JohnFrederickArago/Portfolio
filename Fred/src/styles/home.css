@@ -51,27 +51,42 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  contain: layout paint;
 }
 
 .hero img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  inset: 0;
   filter: brightness(70%);
 }
 
+/* Text container */
 .hero .hero-text {
-  position: relative;
-  top: -330px;
+  position: absolute;
+  left: 0;
+  top: 65%;
   width: 100%;
+
   text-align: center;
   z-index: 1;
-  font-family: var(--font-medium);
 
-  font-size: clamp(6rem, 15.8vw, 40rem);
+  pointer-events: none;
+}
+
+/* Actual text scaling */
+.hero .hero-text span {
+  display: inline-block;
+
+  font-family: var(--font-medium), sans-serif;
   white-space: nowrap;
+
+  /* KEY: responsive scaling that behaves consistently across browsers */
+  font-size: clamp(3rem, 16.92vw, 22.6rem);
+
+  /* optional polish for cinematic look */
+  letter-spacing: -0.02em;
 }
 
 /* Hamburger Menu */
@@ -394,7 +409,7 @@ hr {
 /* Large Laptop */
 @media (min-width: 1440px) and (max-width: 1919px) {
   .hero .hero-text {
-    top: -250px;
+    top: 65%;
   }
 
   .work-preview-content-image img {
@@ -415,13 +430,13 @@ hr {
 
 /* Laptop */
 @media (min-width: 1024px) and (max-width: 1439px) {
+  .hero .hero-text {
+    top: 74%;
+  }
+
   .placeholder {
     width: 80px;
     height: 20px;
-  }
-
-  .hero .hero-text {
-    top: -180px;
   }
 
   .selected-works p {
@@ -491,7 +506,7 @@ hr {
   }
 
   .hero .hero-text {
-    top: -140px;
+    top: 68%;
   }
 
   .intro {
@@ -588,6 +603,10 @@ hr {
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
+  .hero .hero-text {
+    top: 60%;
+  }
+
   .off-screen-menu {
     height: 100vh;
   }
@@ -616,6 +635,10 @@ hr {
     display: flex;
   }
 
+  .hero .hero-text {
+    top: 82%;
+  }
+
   .ham-menu {
     display: block;
   }
@@ -625,7 +648,6 @@ hr {
   }
 
   .hero .hero-text {
-    top: -80px;
     font-size: clamp(1rem, 15.8vw, 40rem);
   }
 
