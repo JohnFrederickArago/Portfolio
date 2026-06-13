@@ -1,53 +1,15 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import Lenis from "lenis";
 
 export default function SmoothScrollLayout({ children }) {
   const prefersReducedMotion = useReducedMotion();
 
-  const getLenisState = () => {
-    if (typeof window === "undefined") return false;
-
-    // PRO RULE: disable Lenis on tablets (portrait + landscape)
-    const isTablet = window.matchMedia(
-      "(min-width: 768px) and (max-width: 1366px)",
-    ).matches;
-
-    return !isTablet;
-  };
-
-  const [isLenisEnabled, setIsLenisEnabled] = useState(getLenisState);
-
-  useEffect(() => {
-    const onResize = () => {
-      setIsLenisEnabled(getLenisState());
-    };
-
-    window.addEventListener("resize", onResize, { passive: true });
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
-  const shouldRunLenis = useMemo(() => isLenisEnabled, [isLenisEnabled]);
-
   const lenisRef = useRef(null);
   const rafIdRef = useRef(null);
 
   useEffect(() => {
-    if (!shouldRunLenis) {
-      // cleanup if toggled off
-      if (rafIdRef.current) {
-        cancelAnimationFrame(rafIdRef.current);
-        rafIdRef.current = null;
-      }
-      if (lenisRef.current) {
-        lenisRef.current.destroy();
-        lenisRef.current = null;
-      }
-      return;
-    }
+    if (prefersReducedMotion) return;
 
     // Prevent double-init (React strict mode removed in main.jsx,
     // but this is a safe guard for future dev/prod differences).
@@ -65,7 +27,6 @@ export default function SmoothScrollLayout({ children }) {
     lenisRef.current = lenis;
 
     const raf = (time) => {
-      // If turned off while RAF is pending
       if (!lenisRef.current) return;
 
       lenisRef.current.raf(time);
@@ -85,7 +46,7 @@ export default function SmoothScrollLayout({ children }) {
         lenisRef.current = null;
       }
     };
-  }, [shouldRunLenis]);
+  }, [prefersReducedMotion]);
 
   if (prefersReducedMotion) {
     return <>{children}</>;
