@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Modernist-Bold";
+  src: url("../assets/fonts/Sk-Modernist-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Modernist-Medium";
+  src: url("../assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Modernist-Regular";
+  src: url("../assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Fonts */
+  --font-regular: "Modernist-Regular", sans-serif;
+  --font-medium: "Modernist-Medium", sans-serif;
+  --font-bold: "Modernist-Bold", sans-serif;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-text-dark: #000;
+  --color-muted: #adb5bd;
+
+  /* Spacing */
+  --page-padding: 20px 32px;
+
+  /* Typography */
+  --base-font-size: 0.92rem;
+  --base-line-height: 1.1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-regular);
+  font-size: var(--base-font-size);
+  text-decoration: none;
+  color: var(--color-white);
+  list-style: none;
+  line-height: var(--base-line-height);
+  scroll-behavior: smooth;
+  min-height: 0;
+  min-width: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
