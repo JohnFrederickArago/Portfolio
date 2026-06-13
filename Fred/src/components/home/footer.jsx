@@ -13,7 +13,7 @@ function Footer() {
     email,
   )}&su=${subject}&body=${body}`;
 
-  const viewport = { once: true, margin: "-70px 0px -10px 0px" };
+  const viewport = { once: false, margin: "-70px 0px -10px 0px" };
 
   return (
     <>

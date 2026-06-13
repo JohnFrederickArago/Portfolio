@@ -1,14 +1,13 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { perLetterReveal } from "../variants/perLetterReveal";
 
 function PerLetterReveal({ lines, className }) {
-  const renderedLines = useMemo(() => {
-    return lines.map((line, lineIndex) => {
-      const chars = line.split("");
-      return (
+  return (
+    <motion.p>
+      {lines.map((line, lineIndex) => (
         <React.Fragment key={lineIndex}>
-          {chars.map((char, charIndex) => (
+          {line.split("").map((char, charIndex) => (
             <motion.span
               key={`${lineIndex}-${charIndex}`}
               variants={perLetterReveal}
@@ -19,11 +18,9 @@ function PerLetterReveal({ lines, className }) {
           ))}
           <br />
         </React.Fragment>
-      );
-    });
-  }, [lines, className]);
-
-  return <motion.p>{renderedLines}</motion.p>;
+      ))}
+    </motion.p>
+  );
 }
 
-export default React.memo(PerLetterReveal);
+export default PerLetterReveal;
