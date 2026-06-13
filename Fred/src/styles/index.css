@@ -1,33 +1,25 @@
 @font-face {
-  font-family: "ApfelGrotezk-Fett";
-  src: url("src/assets/fonts/ApfelGrotezk-Fett.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ApfelGrotezk-Mittel";
-  src: url("src/assets/fonts/ApfelGrotezk-Mittel.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ApfelGrotezk-Regular";
-  src: url("src/assets/fonts/ApfelGrotezk-Regular.otf") format("opentype");
-}
-
-@font-face {
   font-family: "Modernist-Bold";
-  src: url("src/assets/fonts/Sk-Modernist-Bold.otf") format("opentype");
+  src: url("../assets/fonts/Sk-Modernist-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Modernist-Medium";
-  src: url("src/assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
-  font-weight: Bolder;
+  src: url("../assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Modernist-Regular";
-  src: url("src/assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
-  font-weight: bold;
+  src: url("../assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -53,7 +45,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-bold);
+  font-family: var(--font-regular);
   font-size: var(--base-font-size);
   text-decoration: none;
   color: var(--color-white);
