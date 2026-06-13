@@ -30,10 +30,7 @@ export default function SmoothScrollLayout({ children }) {
     };
   }, []);
 
-  const shouldRunLenis = useMemo(
-    () => !prefersReducedMotion && isLenisEnabled,
-    [prefersReducedMotion, isLenisEnabled],
-  );
+  const shouldRunLenis = useMemo(() => isLenisEnabled, [isLenisEnabled]);
 
   const lenisRef = useRef(null);
   const rafIdRef = useRef(null);

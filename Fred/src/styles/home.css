@@ -515,10 +515,10 @@ hr {
 }
 
 /* Desktop */
-@media (min-width: 1025px) and (max-width: 1600px) {
+@media (min-width: 1025px) and (max-width: 2560px) {
   /* Header */
   .hero .hero-text {
-    top: 70%;
+    top: 62%;
   }
 
   .work-preview-content-image img {
