@@ -21,11 +21,6 @@ export default function SmoothScrollLayout({ children }) {
   useEffect(() => {
     const onResize = () => {
       setIsLenisEnabled(getLenisState());
-
-      // Keep Lenis scroll measurements in sync with layout changes
-      if (lenisRef.current) {
-        lenisRef.current.resize();
-      }
     };
 
     window.addEventListener("resize", onResize, { passive: true });
@@ -63,8 +58,7 @@ export default function SmoothScrollLayout({ children }) {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
-      // Prevents the “double scrollbar / scrollbar gutter” effect on desktop
-      smoothWheel: false,
+      smoothWheel: true,
       wheelMultiplier: 1,
     });
 
