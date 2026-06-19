@@ -61,3 +61,31 @@ html,
 body {
   overflow-x: hidden;
 }
+
+/* 4k  */
+@media (min-width: 2561px) {
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1600px) {
+}
+
+/* Tablet (Landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+}
+
+/* Tablet (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+}
+
+/* Large Phone (Portrait) */
+@media (min-width: 431px) and (max-width: 767px) and (orientation: portrait) {
+}
+
+/* Mobile (Landscape) */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+}
+
+/* Mobile (Portrait) */
+@media (max-width: 430px) and (orientation: portrait) {
+}
