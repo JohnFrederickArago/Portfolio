@@ -12,7 +12,7 @@ import { staggerParent } from "../../animations/variants/works/staggerParent";
 import { childVariants } from "../../animations/variants/works/childVariants";
 import { imageVariants } from "../../animations/variants/works/imageVariants";
 
-function Works() {
+function SelectedWorks() {
   const viewport = { once: true, margin: "-70px 0px -10px 0px" };
 
   return (
@@ -365,4 +365,4 @@ function Works() {
   );
 }
 
-export default Works;
+export default SelectedWorks;

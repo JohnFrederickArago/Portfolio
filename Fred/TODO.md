@@ -1,5 +1,2 @@
-# TODO - Works scroll animations (Framer Motion)
-
-- [x] Install `framer-motion`
-- [x] Update `src/components/home/works.jsx` to use Framer Motion viewport-triggered animations for the works list
-- [x] Run dev server and sanity-check scroll animations (once per item)
+- [ ] Update `src/styles/works.css` to right-align all `.work-type` text (stacked rows) using `flex-direction: column` + `align-items: flex-end` + `text-align: right`
+- [ ] Verify on the Works page that both the header cell (“TYPE ✦”) and the data cell types align to the right edge

@@ -5,6 +5,7 @@ import App from "./app.jsx";
 import SmoothScrollLayout from "./SmoothScrollLayout.jsx";
 import "./styles/index.css";
 import "./styles/home.css";
+import "./styles/works.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

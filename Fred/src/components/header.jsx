@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import Logo from "../../assets/image/Logo-White.png";
-import Hero from "../../assets/image/Landing-Page.jpg";
+import Logo from "../assets/image/Logo-Black.png";
+import Logo2 from "../assets/image/Logo-White.png";
 
-import { staggerParent } from "../../animations/variants/works/staggerParent";
-import { childVariants } from "../../animations/variants/works/childVariants";
+import { staggerParent } from "../animations/variants/works/staggerParent";
+import { childVariants } from "../animations/variants/works/childVariants";
 
 function Header() {
   const [time, setTime] = useState(new Date());
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,14 +21,15 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    const hamMenu = document.querySelector(".ham-menu");
+    const bhamMenu = document.querySelector(".b-ham-menu");
     const offScreenMenu = document.querySelector(".off-screen-menu");
 
-    if (!hamMenu || !offScreenMenu) return;
+    if (!bhamMenu || !offScreenMenu) return;
 
     const onHamburgerClick = () => {
       const isActive = offScreenMenu.classList.toggle("active");
-      hamMenu.classList.toggle("active", isActive);
+      bhamMenu.classList.toggle("active", isActive);
+      setIsMenuOpen(isActive);
     };
 
     const onHamburgerKeyDown = (e) => {
@@ -37,12 +39,12 @@ function Header() {
       }
     };
 
-    hamMenu.addEventListener("click", onHamburgerClick);
-    hamMenu.addEventListener("keydown", onHamburgerKeyDown);
+    bhamMenu.addEventListener("click", onHamburgerClick);
+    bhamMenu.addEventListener("keydown", onHamburgerKeyDown);
 
     return () => {
-      hamMenu.removeEventListener("click", onHamburgerClick);
-      hamMenu.removeEventListener("keydown", onHamburgerKeyDown);
+      bhamMenu.removeEventListener("click", onHamburgerClick);
+      bhamMenu.removeEventListener("keydown", onHamburgerKeyDown);
     };
   }, []);
 
@@ -51,20 +53,20 @@ function Header() {
 
   return (
     <>
-      <header className="header">
+      <header className="b-header">
         <motion.nav
-          className="navbar"
+          className="b-navbar"
           variants={staggerParent}
           initial="hidden"
           whileInView="show"
           viewport={viewport}
         >
-          <div className="logo">
+          <div className="b-logo">
             <NavLink to="/">
               <motion.img src={Logo} alt="Logo" variants={childVariants} />
             </NavLink>
           </div>
-          <div className="timePlace">
+          <div className="b-timePlace">
             <motion.p variants={childVariants}>
               {time.toLocaleTimeString("en-US", {
                 hour: "2-digit",
@@ -77,10 +79,10 @@ function Header() {
               Dubai, United Arab Emirates
             </motion.p>
           </div>
-          <motion.div className="role" variants={childVariants}>
+          <motion.div className="b-role" variants={childVariants}>
             {"(Multimedia Designer)"}
           </motion.div>
-          <ul className="nav-links">
+          <ul className="b-nav-links">
             <motion.li variants={childVariants}>
               <NavLink to="/">Home</NavLink>
             </motion.li>
@@ -94,7 +96,7 @@ function Header() {
               <NavLink to="/contact">Contact</NavLink>
             </motion.li>
           </ul>
-          <div className="placeholder"></div>
+          <div className="b-placeholder"></div>
         </motion.nav>
 
         <motion.div
@@ -139,13 +141,17 @@ function Header() {
         </motion.div>
 
         <nav>
-          <div className="logo-menu">
+          <div className="b-logo-menu">
             <NavLink to="/">
-              <img src={Logo} alt="Logo" />
+              <img
+                src={isMenuOpen ? Logo2 : Logo}
+                alt="Logo"
+                className={isMenuOpen ? "white-logo" : "black-logo"}
+              />
             </NavLink>
           </div>
           <div
-            className="ham-menu"
+            className="b-ham-menu"
             aria-label="Open menu"
             role="button"
             tabIndex={0}
@@ -154,26 +160,6 @@ function Header() {
             <span></span>
           </div>
         </nav>
-
-        <div className="hero">
-          <motion.img
-            src={Hero}
-            alt="Hero Image"
-            initial={{ scale: 6.35, filter: "brightness(50%)" }}
-            animate={{
-              scale: 1.35,
-              filter: "brightness(70%)",
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          />
-
-          <div className="hero-text">
-            <span>FRED ARAGO</span>
-          </div>
-        </div>
       </header>
     </>
   );
