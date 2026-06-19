@@ -1071,6 +1071,10 @@ hr {
     font-size: clamp(2rem, 5.2vw, 3.5rem);
   }
 
+  .footer-container img {
+    width: 2.8rem;
+  }
+
   .footer-email {
     font-size: var(--base-font-size);
   }
