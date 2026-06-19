@@ -54,6 +54,7 @@
   list-style: none;
   line-height: var(--base-line-height);
   scroll-behavior: smooth;
+  cursor: crosshair;
 }
 
 html,

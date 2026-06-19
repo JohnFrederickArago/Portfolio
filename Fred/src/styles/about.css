@@ -1,0 +1,407 @@
+.about-header {
+  padding: var(--page-padding);
+  margin: 40px 0;
+}
+
+.about-header p {
+  color: var(--color-text-dark);
+  font-family: var(--font-bold);
+  font-size: 4rem;
+}
+
+.about-container img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  margin: 40px 0;
+}
+
+.about-contents-container {
+  padding: var(--page-padding);
+}
+
+.about-contents-container p {
+  color: var(--color-text-dark);
+}
+
+.about-who {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.right-about-p {
+  width: 60rem;
+  text-align: start;
+  font-size: var(--largest-font-size);
+  font-family: var(--font-bold);
+}
+
+.about-services {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.right-about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-about p {
+  width: 60rem;
+  text-align: start;
+  font-size: 1.8rem;
+  font-family: var(--font-bold);
+}
+
+.about-clients {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.clients-table {
+  margin: 180px 0;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+.clients-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  overflow: hidden;
+  color: var(--color-text-dark);
+}
+
+/* black wipe */
+.clients-list::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.clients-list:hover::before {
+  transform: scaleY(1);
+}
+
+/* IMPORTANT: force text inside to override about styles */
+.clients-list:hover p {
+  color: #fff !important;
+}
+
+/* keep layering correct */
+.clients-list > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* typography */
+.clients-list p {
+  font-family: var(--font-bold);
+  font-size: var(--larger-font-size);
+  margin: 0;
+}
+
+.clients-table hr.line2 {
+  all: unset;
+  display: block;
+
+  border-top: 1px solid #adb5bd5e;
+
+  width: 100%;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.clients {
+  width: 20rem;
+}
+
+.did-what {
+  width: 20rem;
+}
+
+.client-year {
+  width: 10rem;
+  text-align: right;
+}
+
+@media (min-width: 2561px) {
+  .about-header {
+    margin: 100px 0;
+  }
+
+  .about-header p {
+    font-size: 8rem;
+  }
+
+  .about-container img {
+    height: 100vh;
+    margin: 80px 0;
+  }
+
+  .about-who {
+    padding: 300px 0;
+  }
+
+  .right-about-p {
+    width: 120rem;
+    font-size: 5.2rem;
+  }
+
+  .right-about p {
+    width: 120rem;
+    font-size: 4.2rem;
+  }
+
+  .about-services {
+    padding: 300px 0;
+  }
+
+  .about-clients {
+    padding: 300px 0;
+    padding-bottom: 0;
+  }
+
+  .clients-table {
+    margin: 400px 0;
+    margin-top: 250px;
+  }
+
+  .clients-list p {
+    font-size: var(--largest-font-size);
+  }
+
+  .clients {
+    width: 60rem;
+  }
+
+  .did-what {
+    width: 60rem;
+  }
+
+  .client-year {
+    width: 20rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .about-header {
+    margin: 60px 0;
+  }
+
+  .about-header p {
+    font-size: 2.8rem;
+  }
+
+  .about-container img {
+    height: 100vh;
+    margin-top: 0px;
+  }
+
+  .right-about-p {
+    width: 50rem;
+  }
+
+  .right-about p {
+    width: 50rem;
+  }
+}
+
+/* Tablet (Landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+  .about-header {
+    margin: 60px 0;
+  }
+
+  .about-header p {
+    font-size: 2.7rem;
+  }
+
+  .about-container img {
+    height: 100vh;
+    margin-top: 20px;
+  }
+
+  .right-about-p {
+    width: 30rem;
+    font-size: 2rem;
+  }
+
+  .right-about p {
+    width: 30rem;
+    font-size: 1.5rem;
+  }
+
+  .clients-list p {
+    font-size: var(--base-font-size);
+  }
+
+  .clients {
+    width: 28em;
+  }
+}
+
+/* Tablet (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .about-header {
+    margin: 150px 0;
+  }
+
+  .about-header p {
+    font-size: 2.7rem;
+  }
+
+  .about-container img {
+    height: 50vh;
+    margin-top: -50px;
+  }
+
+  .about-who {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .right-about-p {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .right-about p {
+    width: 30rem;
+    font-size: 1.5rem;
+  }
+
+  .clients-list p {
+    font-size: var(--base-font-size);
+  }
+
+  .clients {
+    width: 28em;
+  }
+}
+
+/* Large Phone (Portrait) */
+@media (min-width: 431px) and (max-width: 767px) and (orientation: portrait) {
+  .about-header {
+    margin: 150px 0;
+  }
+
+  .about-header p {
+    font-size: 2.7rem;
+  }
+
+  .about-container img {
+    height: 50vh;
+    margin-top: -10px;
+  }
+
+  .about-who {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .right-about-p {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .right-about p {
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+
+  .clients-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .clients-list p {
+    font-size: var(--base-font-size);
+  }
+
+  .clients {
+    width: 100%;
+  }
+
+  .did-what {
+    width: 100%;
+  }
+
+  .client-year {
+    width: 100%;
+    text-align: left;
+    color: var(--color-muted) !important;
+  }
+}
+
+/* Mobile (Landscape) */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+}
+
+/* Mobile (Portrait) */
+@media (max-width: 430px) and (orientation: portrait) {
+  .about-header {
+    margin: 150px 0;
+  }
+
+  .about-header p {
+    font-size: var(--largest-font-size);
+  }
+
+  .about-container img {
+    height: 50vh;
+    margin-top: -16px;
+  }
+
+  .about-who {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .right-about-p {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .right-about p {
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+
+  .clients-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .clients-list p {
+    font-size: var(--base-font-size);
+  }
+
+  .clients {
+    width: 100%;
+  }
+
+  .did-what {
+    width: 100%;
+  }
+
+  .client-year {
+    width: 100%;
+    text-align: left;
+    color: var(--color-muted) !important;
+  }
+}
