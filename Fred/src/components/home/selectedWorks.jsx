@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+
 import Sisters from "../../assets/works/Sisters - Photo/Sisters1.jpg";
 import Caputo from "../../assets/works/Caputo - Photo/Caputo1.jpg";
 import Blackline from "../../assets/works/Blackline - Photo/Blackline1.jpg";
@@ -32,7 +34,7 @@ function SelectedWorks() {
         <hr />
 
         <div className="work-list">
-          <div className="work-cards">
+          <NavLink to="/works/sisters" className="work-cards">
             <motion.div
               className="work-item"
               variants={itemVariants}
@@ -54,7 +56,7 @@ function SelectedWorks() {
                   whileInView="visible"
                   viewport={viewport}
                 >
-                  SISTERS BEAUTY LOUNGE X L'OREAL
+                  '26 SUMMER HAIR COLLECTION
                 </motion.p>
               </div>
 
@@ -70,10 +72,12 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
-                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
-                    <motion.p variants={childVariants}>PRODUCTION</motion.p>
-                    <motion.p variants={childVariants}>EDITING</motion.p>
                     <motion.p variants={childVariants}>MODEL SHOOT</motion.p>
+                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
+                    <motion.p variants={childVariants}>VIDEOGRAPHY</motion.p>
+                    <motion.p variants={childVariants}>
+                      POST-PRODUCTION
+                    </motion.p>
                   </motion.div>
 
                   <motion.div
@@ -93,11 +97,11 @@ function SelectedWorks() {
                 2026
               </motion.p>
             </motion.div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-cards">
+          <NavLink to="/works/caputo" className="work-cards">
             <motion.div
               className="work-item"
               variants={itemVariants}
@@ -110,7 +114,7 @@ function SelectedWorks() {
                   <span className="number">02</span>
                 </motion.p>
                 <motion.p variants={childVariants}>
-                  CAPUTO FLOUR X CASINNETO
+                  EVENT HIGHLIGHT COLLECTION
                 </motion.p>
               </div>
 
@@ -146,11 +150,11 @@ function SelectedWorks() {
                 2026
               </motion.p>
             </motion.div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-cards">
+          <NavLink to="/works/hermes" className="work-cards">
             <motion.div
               className="work-item"
               variants={itemVariants}
@@ -198,11 +202,11 @@ function SelectedWorks() {
                 2025
               </motion.p>
             </motion.div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-cards">
+          <NavLink to="/works/blackline" className="work-cards">
             <motion.div
               className="work-item"
               variants={itemVariants}
@@ -253,11 +257,11 @@ function SelectedWorks() {
                 2025
               </motion.p>
             </motion.div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-cards">
+          <NavLink to="/works/offset" className="work-cards">
             <motion.div
               className="work-item"
               variants={itemVariants}
@@ -304,11 +308,11 @@ function SelectedWorks() {
                 2025
               </motion.p>
             </motion.div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-cards">
+          <NavLink to="/works/adidas" className="work-cards">
             <motion.div
               className="work-item"
               variants={itemVariants}
@@ -358,7 +362,7 @@ function SelectedWorks() {
                 2024
               </motion.p>
             </motion.div>
-          </div>
+          </NavLink>
         </div>
       </div>
     </>

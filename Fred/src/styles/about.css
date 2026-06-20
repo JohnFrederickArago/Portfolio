@@ -22,6 +22,7 @@
 
 .about-contents-container p {
   color: var(--color-text-dark);
+  font-family: var(--font-bold);
 }
 
 .about-who {

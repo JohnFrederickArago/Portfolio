@@ -44,9 +44,9 @@ function Work() {
               <p className="gray">01</p>
               <div className="number-name-sub">
                 <p className="gray">01</p>
-                <p>SISTERS BEAUTY LOUNGE X L'OREAL</p>
+                <p>'26 SUMMER HAIR COLLECTION</p>
               </div>
-              <p>SISTERS BEAUTY LOUNGE X L'OREAL</p>
+              <p>'26 SUMMER HAIR COLLECTION</p>
               <img
                 src={Sisters}
                 alt="Sisters Work Preview"
@@ -55,10 +55,10 @@ function Work() {
             </div>
 
             <div className="work-type">
+              <p>MODEL SHOOT</p>
               <p>PHOTOGRAPHY</p>
-              <p>PRODUCTION</p>
-              <p>EDITING</p>
-              <p>SHOOT</p>
+              <p>VIDEOGRAPHY</p>
+              <p>POST-PRODUCTION</p>
 
               <img
                 src={Sisters}
