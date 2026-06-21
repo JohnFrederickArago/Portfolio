@@ -12,7 +12,9 @@ import CaputoImage8 from "../../../assets/works/Caputo - Photo/Caputo9.jpg";
 import CaputoImage9 from "../../../assets/works/Caputo - Photo/Caputo10.jpg";
 import CaputoImage10 from "../../../assets/works/Caputo - Photo/Caputo11.jpg";
 import CaputoImage11 from "../../../assets/works/Caputo - Photo/Caputo12.jpg";
-import CaputoVideo from "../../../assets/works/Caputo - Video/Casinetto x Caputo.mp4";
+
+const CaputoVideo =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/q_auto/f_auto/v1782066989/Casinetto_x_Caputo_zppaq5.mp4";
 
 function Caputo1() {
   const [isOpen, setIsOpen] = useState(false);

@@ -33,11 +33,12 @@ function Offset1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Created automotive visual content for Offset Motor Company,
-              capturing a featured vehicle in a controlled garage environment.
-              Focused on cinematic lighting, detail-driven composition, and a
-              cohesive visual style to highlight the car’s design, texture, and
-              presence for brand and promotional use.
+              Explored automotive culture through a storytelling-driven
+              approach, capturing the details, atmosphere, and human connections
+              that defined the event. Through thoughtful composition and timing,
+              the imagery highlighted the passion, craftsmanship, and community
+              surrounding the showcased vehicles, creating a visual narrative
+              that reflected the unique energy and character of the gathering.
             </p>
           </div>
           <div className="portfolio-about-right">
@@ -47,15 +48,14 @@ function Offset1() {
               </div>
               <div className="client">
                 <p className="gray">CLIENT:</p>
-                <p>Offset Motor Company</p>
+                <p>Offset DXB</p>
               </div>
             </div>
             <div className="portfolio-about-right-bottom">
               <div className="type">
                 <p className="gray">TYPE:</p>
-                <p>Videography</p>
-                <p>Photography</p>
-                <p>Post Production</p>
+                <p>Visual Storytelling</p>
+                <p>Composition</p>
               </div>
             </div>
           </div>

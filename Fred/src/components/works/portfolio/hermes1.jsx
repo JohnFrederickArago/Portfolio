@@ -6,7 +6,8 @@ import HermesImage2 from "../../../assets/works/Hermes Jetski - Photo/Hermes3.jp
 import HermesImage3 from "../../../assets/works/Hermes Jetski - Photo/Hermes4.jpg";
 import HermesImage4 from "../../../assets/works/Hermes Jetski - Photo/Hermes5.jpg";
 
-import HermesVideo from "../../../assets/works/Hermes Jetski - Video/HermesVideo.mp4";
+const HermesVideo =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/q_auto/f_auto/v1782067022/HermesVideo_k5g3bw.mp4";
 
 function Hermes1() {
   const [isOpen, setIsOpen] = useState(false);

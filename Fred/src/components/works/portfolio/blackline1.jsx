@@ -8,7 +8,8 @@ import BlacklineImage4 from "../../../assets/works/Blackline - Photo/Blackline5.
 import BlacklineImage5 from "../../../assets/works/Blackline - Photo/Blackline6.jpg";
 import BlacklineImage6 from "../../../assets/works/Blackline - Photo/Blackline7.jpg";
 
-import BlacklineVideo from "../../../assets/works/Blackline - Video/BlacklineVideo.mp4";
+const BlacklineVideo =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/q_auto/f_auto/v1782066950/BlacklineVideo_r11vdm.mp4";
 
 function Blackline1() {
   const [isOpen, setIsOpen] = useState(false);

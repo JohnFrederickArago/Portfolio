@@ -8,7 +8,9 @@ import SistersImage4 from "../../../assets/works/Sisters - Photo/Sisters5.jpg";
 import SistersImage5 from "../../../assets/works/Sisters - Photo/Sisters6.jpg";
 import SistersImage6 from "../../../assets/works/Sisters - Photo/Sisters7.jpg";
 import SistersImage7 from "../../../assets/works/Sisters - Photo/Sisters8.jpg";
-import SistersVideo from "../../../assets/works/Sisters - Video/H2 - Sisters Beauty Lounge x L'Oréal (Hair Collection).mp4";
+
+const SistersVideo =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/q_auto/f_auto/v1782067010/H2_-_Sisters_Beauty_Lounge_x_L_Or%C3%A9al_Hair_Collection_ljfgpr.mp4";
 
 function Sisters1() {
   const [isOpen, setIsOpen] = useState(false);
