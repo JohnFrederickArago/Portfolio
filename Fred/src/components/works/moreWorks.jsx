@@ -11,11 +11,15 @@ import Adidas from "../../assets/works/Adidas Climacool - Photo/Climacool-Design
 function MoreWorks() {
   const works = [
     { img: Sisters, title: "'26 SUMMER HAIR COLLECTION", to: "/works/sisters" },
-    { img: Caputo, title: "Caputo", to: "/works/caputo" },
-    { img: Blackline, title: "Blackline", to: "/works/blackline" },
-    { img: Hermes, title: "Hermes", to: "/works/hermes" },
-    { img: Offset, title: "Offset", to: "/works/offset" },
-    { img: Adidas, title: "Adidas", to: "/works/adidas" },
+    { img: Caputo, title: "EVENT HIGHLIGHT COLLECTION", to: "/works/caputo" },
+    {
+      img: Blackline,
+      title: "AUTOMOTIVE STUDIO VISUALS",
+      to: "/works/blackline",
+    },
+    { img: Hermes, title: "MARINE LIFESTYLE SHOOT", to: "/works/hermes" },
+    { img: Offset, title: "'25 CAR CULTURE EXHIBITION", to: "/works/offset" },
+    { img: Adidas, title: "CREATIVE AD CONCEPT", to: "/works/adidas" },
   ];
 
   const randomWorks = useMemo(() => {
@@ -27,7 +31,9 @@ function MoreWorks() {
     <div className="more-works-container">
       <div className="more-works-header">
         <p className="gray">MORE WORKS</p>
-        <p>See All</p>
+        <NavLink to="/works">
+          <p>See All</p>
+        </NavLink>
       </div>
 
       <hr />

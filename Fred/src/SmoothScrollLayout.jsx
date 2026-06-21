@@ -1,68 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Lenis from "lenis";
+import { useLenis } from "./LenisContext";
 
 export default function SmoothScrollLayout({ children }) {
-  const getLenisState = () => {
-    if (typeof window === "undefined") return false;
+  const { setLenis } = useLenis();
 
-    // PRO RULE: disable Lenis on tablets (portrait + landscape)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const isTablet = window.matchMedia(
       "(min-width: 768px) and (max-width: 1366px)",
     ).matches;
 
-    return !isTablet;
-  };
-
-  const [isLenisEnabled, setIsLenisEnabled] = useState(getLenisState);
-
-  useEffect(() => {
-    const onResize = () => {
-      setIsLenisEnabled(getLenisState());
-    };
-
-    window.addEventListener("resize", onResize, { passive: true });
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isLenisEnabled) return;
+    if (isTablet) return;
 
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 1,
     });
 
-    let rafId;
-    let isMounted = true;
+    setLenis(lenis);
 
-    const raf = (time) => {
-      if (!isMounted) return;
+    let raf;
+    const loop = (time) => {
       lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
+      raf = requestAnimationFrame(loop);
     };
 
-    rafId = requestAnimationFrame(raf);
+    raf = requestAnimationFrame(loop);
 
     return () => {
-      isMounted = false;
-      cancelAnimationFrame(rafId);
+      cancelAnimationFrame(raf);
       lenis.destroy();
+      setLenis(null);
     };
-  }, [isLenisEnabled]);
+  }, []);
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
     >
       {children}
     </motion.div>

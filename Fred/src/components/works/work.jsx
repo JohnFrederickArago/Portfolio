@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import Sisters from "../../assets/works/Sisters - Photo/Sisters1.jpg";
 import Caputo from "../../assets/works/Caputo - Photo/Caputo1.jpg";
@@ -39,7 +41,7 @@ function Work() {
 
           <hr />
 
-          <div className="work-list2">
+          <NavLink to="/works/sisters" className="work-list2">
             <div className="work-number-name">
               <p className="gray">01</p>
               <div className="number-name-sub">
@@ -55,10 +57,9 @@ function Work() {
             </div>
 
             <div className="work-type">
-              <p>MODEL SHOOT</p>
-              <p>PHOTOGRAPHY</p>
-              <p>VIDEOGRAPHY</p>
-              <p>POST-PRODUCTION</p>
+              <p>MODEL PHOTOGRAPHY</p>
+              <p>VIDEO PRODUCTION</p>
+              <p>LIGHTING DIRECTION</p>
 
               <img
                 src={Sisters}
@@ -74,18 +75,18 @@ function Work() {
             <div className="work-year">
               <p>2026</p>
             </div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-list2">
+          <NavLink to="/works/caputo" className="work-list2">
             <div className="work-number-name">
               <p className="gray">02</p>
               <div className="number-name-sub">
                 <p className="gray">02</p>
-                <p>CAPUTO FLOUR X CASINNETO</p>
+                <p>EVENT HIGHLIGHT COLLECTION</p>
               </div>
-              <p>CAPUTO FLOUR X CASINNETO</p>
+              <p>EVENT HIGHLIGHT COLLECTION</p>
               <img
                 src={Caputo}
                 alt="Caputo Work Preview"
@@ -94,6 +95,7 @@ function Work() {
             </div>
 
             <div className="work-type">
+              <p>EVENT COVERAGE</p>
               <p>PHOTOGRAPHY</p>
               <p>VIDEOGRAPHY</p>
 
@@ -111,18 +113,18 @@ function Work() {
             <div className="work-year">
               <p>2026</p>
             </div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-list2">
+          <NavLink to="/works/hermes" className="work-list2">
             <div className="work-number-name">
               <p className="gray">03</p>
               <div className="number-name-sub">
                 <p className="gray">03</p>
-                <p>HERMES</p>
+                <p>MARINE LIFESTYLE SHOOT</p>
               </div>
-              <p>HERMES</p>
+              <p>MARINE LIFESTYLE SHOOT</p>
 
               <img
                 src={Hermes}
@@ -132,9 +134,9 @@ function Work() {
             </div>
 
             <div className="work-type">
-              <p>PHOTOGRAPHY</p>
-              <p>VIDEOGRAPHY</p>
-              <p>EDITING</p>
+              <p>BRAND PHOTOGRAPHY</p>
+              <p>VIDEO PRODUCTION</p>
+              <p>CONTENT</p>
 
               <img
                 src={Hermes}
@@ -150,18 +152,18 @@ function Work() {
             <div className="work-year">
               <p>2025</p>
             </div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-list2">
+          <NavLink to="/works/blackline" className="work-list2">
             <div className="work-number-name">
               <p className="gray">04</p>
               <div className="number-name-sub">
                 <p className="gray">04</p>
-                <p>BLACKLINE MOTOR COMPANY</p>
+                <p>AUTOMOTIVE STUDIO VISUALS</p>
               </div>
-              <p>BLACKLINE MOTOR COMPANY</p>
+              <p>AUTOMOTIVE STUDIO VISUALS</p>
 
               <img
                 src={Blackline}
@@ -171,10 +173,9 @@ function Work() {
             </div>
 
             <div className="work-type">
-              <p>PHOTOGRAPHY</p>
               <p>VIDEOGRAPHY</p>
-              <p>PRODUCTION</p>
-              <p>EDITING</p>
+              <p>PHOTOGRAPHY</p>
+              <p>POST PRODUCTION</p>
 
               <img
                 src={Blackline}
@@ -190,18 +191,18 @@ function Work() {
             <div className="work-year">
               <p>2025</p>
             </div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-list2">
+          <NavLink to="/works/offset" className="work-list2">
             <div className="work-number-name">
               <p className="gray">05</p>
               <div className="number-name-sub">
                 <p className="gray">05</p>
-                <p>OFFSET</p>
+                <p>'25 CAR CULTURE EXHIBITION</p>
               </div>
-              <p>OFFSET</p>
+              <p>'25 CAR CULTURE EXHIBITION</p>
 
               <img
                 src={Offset}
@@ -211,7 +212,7 @@ function Work() {
             </div>
 
             <div className="work-type">
-              <p>PHOTOGRAPHY</p>
+              <p>VISUAL STORYTELLING</p>
               <p>COMPOSITION</p>
 
               <img
@@ -228,18 +229,18 @@ function Work() {
             <div className="work-year">
               <p>2025</p>
             </div>
-          </div>
+          </NavLink>
 
           <hr />
 
-          <div className="work-list2">
+          <NavLink to="/works/adidas" className="work-list2">
             <div className="work-number-name">
               <p className="gray">06</p>
               <div className="number-name-sub">
                 <p className="gray">06</p>
-                <p>ADIDAS CLIMACOOL SPEC AD</p>
+                <p>CREATIVE AD CONCEPT</p>
               </div>
-              <p>ADIDAS CLIMACOOL SPEC AD</p>
+              <p>CREATIVE AD CONCEPT</p>
 
               <img
                 src={Adidas}
@@ -249,9 +250,10 @@ function Work() {
             </div>
 
             <div className="work-type">
-              <p>PHOTOGRAPHY</p>
+              <p>GRAPHIC DESIGN</p>
+              <p>BRAND CAMPAIGN</p>
               <p>PRODUCT SHOOT</p>
-              <p>SPEC AD</p>
+              <p>ART DIRECTION</p>
 
               <img
                 src={Adidas}
@@ -267,7 +269,7 @@ function Work() {
             <div className="work-year">
               <p>2024</p>
             </div>
-          </div>
+          </NavLink>
         </div>
       </div>
     </>

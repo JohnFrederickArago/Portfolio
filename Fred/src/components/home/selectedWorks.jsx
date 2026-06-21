@@ -72,11 +72,14 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
-                    <motion.p variants={childVariants}>MODEL SHOOT</motion.p>
-                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
-                    <motion.p variants={childVariants}>VIDEOGRAPHY</motion.p>
                     <motion.p variants={childVariants}>
-                      POST-PRODUCTION
+                      MODEL PHOTOGRAPHY
+                    </motion.p>
+                    <motion.p variants={childVariants}>
+                      VIDEO PRODUCTION
+                    </motion.p>
+                    <motion.p variants={childVariants}>
+                      LIGHTING DIRECTION
                     </motion.p>
                   </motion.div>
 
@@ -130,6 +133,7 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
+                    <motion.p variants={childVariants}>EVENT COVERAGE</motion.p>{" "}
                     <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
                     <motion.p variants={childVariants}>VIDEOGRAPHY</motion.p>
                   </motion.div>
@@ -166,7 +170,9 @@ function SelectedWorks() {
                 <motion.p variants={childVariants}>
                   <span className="number">03</span>
                 </motion.p>
-                <motion.p variants={childVariants}>HERMES</motion.p>
+                <motion.p variants={childVariants}>
+                  MARINE LIFESTYLE SHOOT
+                </motion.p>
               </div>
 
               <motion.div
@@ -181,9 +187,13 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
-                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
-                    <motion.p variants={childVariants}>VIDEOGRAPHY</motion.p>
-                    <motion.p variants={childVariants}>EDITING</motion.p>
+                    <motion.p variants={childVariants}>
+                      BRAND PHOTOGRAPHY
+                    </motion.p>
+                    <motion.p variants={childVariants}>
+                      VIDEO PRODUCTION
+                    </motion.p>
+                    <motion.p variants={childVariants}>CONTENT</motion.p>
                   </motion.div>
                   <motion.div
                     className="work-preview-content-image"
@@ -219,7 +229,7 @@ function SelectedWorks() {
                   <span className="number">04</span>
                 </motion.p>
                 <motion.p variants={childVariants}>
-                  BLACKLINE MOTOR COMPANY
+                  AUTOMOTIVE STUDIO VISUALS
                 </motion.p>
               </div>
 
@@ -235,10 +245,11 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
-                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
                     <motion.p variants={childVariants}>VIDEOGRAPHY</motion.p>
-                    <motion.p variants={childVariants}>PRODUCTION</motion.p>
-                    <motion.p variants={childVariants}>EDITING</motion.p>
+                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
+                    <motion.p variants={childVariants}>
+                      POST PRODUCTION
+                    </motion.p>
                   </motion.div>
                   <motion.div
                     className="work-preview-content-image"
@@ -273,7 +284,9 @@ function SelectedWorks() {
                 <motion.p variants={childVariants}>
                   <span className="number">05</span>
                 </motion.p>
-                <motion.p variants={childVariants}>OFFSET</motion.p>
+                <motion.p variants={childVariants}>
+                  '25 CAR CULTURE EXHIBITION
+                </motion.p>
               </div>
 
               <motion.div
@@ -288,7 +301,9 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
-                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
+                    <motion.p variants={childVariants}>
+                      VISUAL STORYTELLING
+                    </motion.p>
                     <motion.p variants={childVariants}>COMPOSITION</motion.p>
                   </motion.div>
                   <motion.div
@@ -325,7 +340,7 @@ function SelectedWorks() {
                   <span className="number">06</span>
                 </motion.p>
                 <motion.p variants={childVariants}>
-                  ADIDAS CLIMACOOL SPEC AD
+                  CREATIVE AD CONCEPT
                 </motion.p>
               </div>
 
@@ -341,9 +356,10 @@ function SelectedWorks() {
                     className="work-preview-content-description"
                     variants={staggerParent}
                   >
-                    <motion.p variants={childVariants}>PHOTOGRAPHY</motion.p>
+                    <motion.p variants={childVariants}>GRAPHIC DESIGN</motion.p>
+                    <motion.p variants={childVariants}>BRAND CAMPAIGN</motion.p>
                     <motion.p variants={childVariants}>PRODUCT SHOOT</motion.p>
-                    <motion.p variants={childVariants}>SPEC AD</motion.p>
+                    <motion.p variants={childVariants}>ART DIRECTION</motion.p>
                   </motion.div>
                   <motion.div
                     className="work-preview-content-image"

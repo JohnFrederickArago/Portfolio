@@ -221,6 +221,10 @@
   display: none;
 }
 
+.work-year-type p {
+  color: var(--color-muted) !important;
+}
+
 .work-year {
   width: 10rem;
   text-align: right;
@@ -361,6 +365,13 @@
 
 /* Desktop */
 @media (min-width: 1025px) and (max-width: 1600px) {
+  .work-number-name {
+    width: 35rem;
+  }
+
+  .work-type {
+    width: 45rem;
+  }
 }
 
 /* Tablet (Landscape) */
@@ -377,21 +388,15 @@
   }
 
   /* Works */
+  .works-header {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    gap: 20px;
+  }
+
   .works-header p {
-    font-size: 7rem;
-  }
-
-  .work-number-name {
-    width: 40rem;
-  }
-
-  .work-type {
-    width: 30rem;
-    gap: 10px;
-  }
-
-  .work-type img {
-    display: none;
+    font-size: 5rem;
   }
 
   .work-list2 p {
@@ -400,6 +405,46 @@
 
   .gray {
     font-size: var(--base-font-size) !important;
+  }
+
+  .work-type img {
+    display: none;
+  }
+
+  .work-number-name {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .work-type {
+    flex-direction: column;
+    text-align: end;
+    width: 20rem;
+  }
+
+  .number-name-sub {
+    display: none;
+    gap: 15px;
+  }
+
+  .work-number-name > p:not(.gray) {
+    display: block;
+    width: 400rem;
+  }
+
+  .work-number-name img {
+    width: 20rem;
+    aspect-ratio: 3 / 2;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .work-year-type {
+    display: block;
+  }
+
+  .work-year {
+    display: none;
   }
 
   /* More Works */
@@ -633,25 +678,14 @@
 
   /* Works */
   .works-header {
+    display: flex;
     margin-top: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    gap: 20px;
   }
 
   .works-header p {
-    font-size: 6rem;
-  }
-
-  .work-number-name {
-    width: 20rem;
-  }
-
-  .work-type {
-    width: 20rem;
-    gap: 10px;
-  }
-
-  .work-type img {
-    display: none;
+    font-size: 5rem;
   }
 
   .work-list2 p {
@@ -660,6 +694,46 @@
 
   .gray {
     font-size: var(--base-font-size) !important;
+  }
+
+  .work-type img {
+    display: none;
+  }
+
+  .work-number-name {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .work-type {
+    flex-direction: column;
+    text-align: end;
+    width: 20rem;
+  }
+
+  .number-name-sub {
+    display: none;
+    gap: 15px;
+  }
+
+  .work-number-name > p:not(.gray) {
+    display: block;
+    width: 400rem;
+  }
+
+  .work-number-name img {
+    width: 20rem;
+    aspect-ratio: 3 / 2;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .work-year-type {
+    display: block;
+  }
+
+  .work-year {
+    display: none;
   }
 
   /* More Works */

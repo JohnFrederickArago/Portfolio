@@ -19,7 +19,9 @@ function Sisters1() {
         <div className="portfolio-header">
           <p>'26 SUMMER HAIR COLLECTION</p>
         </div>
-        <img src={Hero} alt="Sister Hero Image" className="sisters-image" />
+        <div className="header-hero-img">
+          <img src={Hero} alt="Sister Hero Image" className="sisters-image" />
+        </div>
 
         <div className="portfolio-about">
           <div className="portfolio-about-left">
@@ -44,10 +46,10 @@ function Sisters1() {
             <div className="portfolio-about-right-bottom">
               <div className="type">
                 <p className="gray">TYPE:</p>
-                <p>Model Shoot</p>
-                <p>Photography</p>
-                <p>Videography</p>
-                <p>Post-Production</p>
+                <p>Model Photography</p>
+                <p>Video Production</p>
+                <p>Lighting Direction</p>
+                <p></p>
               </div>
             </div>
           </div>

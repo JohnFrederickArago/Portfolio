@@ -23,7 +23,9 @@ function Caputo1() {
         <div className="portfolio-header">
           <p>EVENT HIGHLIGHT COLLECTION</p>
         </div>
-        <img src={Hero} alt="Sister Hero Image" className="sisters-image" />
+        <div className="header-hero-img">
+          <img src={Hero} alt="Caputo Hero Image" className="caputo-image" />
+        </div>
 
         <div className="portfolio-about">
           <div className="portfolio-about-left">
