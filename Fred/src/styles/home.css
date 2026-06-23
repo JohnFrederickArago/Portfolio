@@ -249,8 +249,6 @@ hr {
   align-items: center;
   margin-bottom: 40px;
   margin-top: 40px;
-  cursor: pointer;
-  pointer-events: auto;
 }
 
 .work-item {
@@ -264,6 +262,7 @@ hr {
   font-family: var(--font-bold);
   color: var(--color-text-dark);
   font-size: var(--larger-font-size);
+  cursor: pointer;
 }
 
 .work-title {
@@ -278,6 +277,7 @@ hr {
 .number {
   color: var(--color-muted) !important;
   font-family: var(--font-bold);
+  cursor: pointer;
 }
 
 .work-preview-content {
@@ -287,6 +287,7 @@ hr {
   justify-content: right;
   align-items: flex-end;
   align-content: flex-end;
+  cursor: pointer;
 }
 
 .work-preview-content-description {
@@ -301,6 +302,7 @@ hr {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
+  cursor: pointer;
 }
 
 .work-preview-content-inner {

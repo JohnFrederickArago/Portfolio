@@ -151,6 +151,10 @@
   width: 40rem;
 }
 
+.work-number-name p {
+  cursor: pointer;
+}
+
 .number-name-sub {
   display: none;
 }
@@ -164,6 +168,10 @@
 
   /* prevent spacing shifts when revealing images */
   position: relative;
+}
+
+.work-type p {
+  cursor: pointer;
 }
 
 .work-type img,
@@ -186,6 +194,7 @@
     opacity 220ms ease,
     visibility 220ms ease,
     transform 220ms ease;
+  cursor: pointer;
 }
 
 .work-list2:hover .work-type img,
@@ -226,11 +235,16 @@
 
 .work-year-type p {
   color: var(--color-muted) !important;
+  cursor: pointer;
 }
 
 .work-year {
   width: 10rem;
   text-align: right;
+}
+
+.work-year p {
+  cursor: pointer;
 }
 
 .work-list2 .gray {
@@ -283,12 +297,14 @@
   display: block;
   aspect-ratio: 4 / 5;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 .more-works-img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
   display: block;
   aspect-ratio: 4 / 5;
   margin: 20px 0;
@@ -298,6 +314,7 @@
   font-family: var(--font-bold);
   color: var(--color-text-dark);
   font-size: var(--larger-font-size);
+  cursor: pointer;
 }
 
 /* 4k  */
