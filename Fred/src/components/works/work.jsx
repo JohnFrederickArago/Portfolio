@@ -18,7 +18,8 @@ import Offset24 from "../../assets/works/Offset '24 - Photo/Offset24.6.jpg";
 const Rosmetic =
   "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov";
 import Friend from "../../assets/works/The FriEND Game Launch/11.1 - Release.png";
-import XRay from "../../assets/works/X-ray Camera Case - Video/X-ray Camera Case.mp4";
+const XRay =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4";
 
 function Work() {
   return (
