@@ -162,7 +162,7 @@ function Header() {
             initial={{ scale: 6.35, filter: "brightness(50%)" }}
             animate={{
               scale: 1.35,
-              filter: "brightness(70%)",
+              filter: "brightness(90%)",
             }}
             transition={{
               duration: 0.8,

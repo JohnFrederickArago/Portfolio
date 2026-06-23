@@ -9,6 +9,17 @@ import Hermes from "../../assets/works/Hermes Jetski - Photo/Hermes1.jpg";
 import Offset from "../../assets/works/Offset '25 - Photo/Offset2.1.jpg";
 import Adidas from "../../assets/works/Adidas Climacool - Photo/Climacool-Design1.jpg";
 
+import ATW from "../../assets/works/ATW - Graphic Design/Post2.jpg";
+import GTR from "../../assets/works/Flat 12 - Photo/Flat12.11.jpg";
+import FOG from "../../assets/works/FOG State - Photo/Post - Fear of God-04.jpg";
+const GP25 =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4";
+import Offset24 from "../../assets/works/Offset '24 - Photo/Offset24.6.jpg";
+const Rosmetic =
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov";
+import Friend from "../../assets/works/The FriEND Game Launch/11.1 - Release.png";
+import XRay from "../../assets/works/X-ray Camera Case - Video/X-ray Camera Case.mp4";
+
 function Work() {
   return (
     <>
@@ -117,11 +128,49 @@ function Work() {
 
           <hr />
 
-          <NavLink to="/works/hermes" className="work-list2">
+          <NavLink to="/works/friend-game" className="work-list2">
             <div className="work-number-name">
               <p className="gray">03</p>
               <div className="number-name-sub">
                 <p className="gray">03</p>
+                <p>THE FRIEND — CREATIVE MARKETING</p>
+              </div>
+              <p>THE FRIEND — CREATIVE MARKETING</p>
+              <img
+                src={Friend}
+                alt="Friend Work Preview"
+                className="friend-image"
+              />
+            </div>
+
+            <div className="work-type">
+              <p>MOTION GRAPHICS</p>
+              <p>GRAPHIC DESIGN</p>
+              <p>CINEMATOGRAPHY</p>
+
+              <img
+                src={Friend}
+                alt="Friend Work Preview"
+                className="friend-image"
+              />
+
+              <div className="work-year-type">
+                <p>2026</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2026</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/hermes" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">04</p>
+              <div className="number-name-sub">
+                <p className="gray">04</p>
                 <p>MARINE LIFESTYLE SHOOT</p>
               </div>
               <p>MARINE LIFESTYLE SHOOT</p>
@@ -158,9 +207,9 @@ function Work() {
 
           <NavLink to="/works/blackline" className="work-list2">
             <div className="work-number-name">
-              <p className="gray">04</p>
+              <p className="gray">05</p>
               <div className="number-name-sub">
-                <p className="gray">04</p>
+                <p className="gray">05</p>
                 <p>AUTOMOTIVE STUDIO VISUALS</p>
               </div>
               <p>AUTOMOTIVE STUDIO VISUALS</p>
@@ -197,9 +246,9 @@ function Work() {
 
           <NavLink to="/works/offset" className="work-list2">
             <div className="work-number-name">
-              <p className="gray">05</p>
+              <p className="gray">06</p>
               <div className="number-name-sub">
-                <p className="gray">05</p>
+                <p className="gray">06</p>
                 <p>'25 CAR CULTURE EXHIBITION</p>
               </div>
               <p>'25 CAR CULTURE EXHIBITION</p>
@@ -233,11 +282,162 @@ function Work() {
 
           <hr />
 
+          <NavLink to="/works/atw" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">07</p>
+              <div className="number-name-sub">
+                <p className="gray">07</p>
+                <p>MARKETING DESIGN INTERN</p>
+              </div>
+              <p>MARKETING DESIGN INTERN</p>
+
+              <img src={ATW} alt="ATW Work Preview" className="atw-image" />
+            </div>
+
+            <div className="work-type">
+              <p>MARKETING DESIGN</p>
+              <p>GRAPHIC DESIGN</p>
+              <p>BRAND DESIGN</p>
+
+              <img src={ATW} alt="ATW Work Preview" className="atw-image" />
+
+              <div className="work-year-type">
+                <p>2025</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2025</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/fog" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">08</p>
+              <div className="number-name-sub">
+                <p className="gray">08</p>
+                <p>EDITORIAL FASHION SHOOT</p>
+              </div>
+              <p>EDITORIAL FASHION SHOOT</p>
+
+              <img src={FOG} alt="FOG Work Preview" className="fog-image" />
+            </div>
+
+            <div className="work-type">
+              <p>SPEC CAMPAIGN</p>
+              <p>EDITORIAL</p>
+              <p>PHOTOGRAPHY</p>
+
+              <img src={FOG} alt="FOG Work Preview" className="fog-image" />
+
+              <div className="work-year-type">
+                <p>2025</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2025</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/gp25" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">09</p>
+              <div className="number-name-sub">
+                <p className="gray">09</p>
+                <p>'25 GRAND PICNIC EXHIBITION</p>
+              </div>
+              <p>'25 GRAND PICNIC EXHIBITION</p>
+              <video src={GP25} loop autoPlay muted playsInline />
+            </div>
+
+            <div className="work-type">
+              <p>VIDEOGRAPHY</p>
+              <p>EDITING</p>
+
+              <video src={GP25} loop autoPlay muted playsInline />
+
+              <div className="work-year-type">
+                <p>2025</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2025</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/rosmetic" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">10</p>
+              <div className="number-name-sub">
+                <p className="gray">10</p>
+                <p>CLINICAL OPERATIONS</p>
+              </div>
+              <p>CLINICAL OPERATIONS</p>
+              <video src={Rosmetic} loop autoPlay muted playsInline />
+            </div>
+
+            <div className="work-type">
+              <p>VIDEOGRAPHY</p>
+              <p>HEALTHCARE</p>
+              <p>CONTENT</p>
+
+              <video src={Rosmetic} loop autoPlay muted playsInline />
+
+              <div className="work-year-type">
+                <p>2025</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2025</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/xray" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">11</p>
+              <div className="number-name-sub">
+                <p className="gray">11</p>
+                <p>VISUAL EFFECT EXPERIMENT</p>
+              </div>
+              <p>VISUAL EFFECT EXPERIMENT</p>
+              <video src={XRay} loop autoPlay muted playsInline />
+            </div>
+
+            <div className="work-type">
+              <p>VFX</p>
+              <p>EDITING</p>
+              <p>CONTENT</p>
+
+              <video src={XRay} loop autoPlay muted playsInline />
+
+              <div className="work-year-type">
+                <p>2024</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2024</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
           <NavLink to="/works/adidas" className="work-list2">
             <div className="work-number-name">
-              <p className="gray">06</p>
+              <p className="gray">12</p>
               <div className="number-name-sub">
-                <p className="gray">06</p>
+                <p className="gray">12</p>
                 <p>CREATIVE AD CONCEPT</p>
               </div>
               <p>CREATIVE AD CONCEPT</p>
@@ -260,6 +460,75 @@ function Work() {
                 alt="Adidas Work Preview"
                 className="adidas-image"
               />
+
+              <div className="work-year-type">
+                <p>2024</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2024</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/offset24" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">13</p>
+              <div className="number-name-sub">
+                <p className="gray">13</p>
+                <p>'24 CAR CULTURE EXHIBITION</p>
+              </div>
+              <p>'24 CAR CULTURE EXHIBITION</p>
+
+              <img
+                src={Offset24}
+                alt="Offset24 Work Preview"
+                className="offset24-image"
+              />
+            </div>
+
+            <div className="work-type">
+              <p>VISUAL STORYTELLING</p>
+              <p>COMPOSITION</p>
+
+              <img
+                src={Offset24}
+                alt="Offset24 Work Preview"
+                className="offset24-image"
+              />
+
+              <div className="work-year-type">
+                <p>2024</p>
+              </div>
+            </div>
+
+            <div className="work-year">
+              <p>2024</p>
+            </div>
+          </NavLink>
+
+          <hr />
+
+          <NavLink to="/works/gtr" className="work-list2">
+            <div className="work-number-name">
+              <p className="gray">14</p>
+              <div className="number-name-sub">
+                <p className="gray">14</p>
+                <p>GT-R RELEASE EVENT</p>
+              </div>
+              <p>GT-R RELEASE EVENT</p>
+
+              <img src={GTR} alt="GTR Work Preview" className="gtr-image" />
+            </div>
+
+            <div className="work-type">
+              <p>AUTOMOTIVE</p>
+              <p>PHOTOGRAPHY</p>
+              <p>COMPOSITION</p>
+
+              <img src={GTR} alt="GTR Work Preview" className="gtr-image" />
 
               <div className="work-year-type">
                 <p>2024</p>

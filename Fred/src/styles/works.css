@@ -166,13 +166,14 @@
   position: relative;
 }
 
-.work-type img {
+.work-type img,
+.work-type video {
   width: 20rem;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   z-index: 1;
 
-  /* keep image out of the flex flow so it doesn't change layout spacing */
+  /* keep media out of the flex flow so it doesn't change layout spacing */
   position: absolute;
   right: 0;
   top: -150px;
@@ -187,7 +188,8 @@
     transform 220ms ease;
 }
 
-.work-list2:hover .work-type img {
+.work-list2:hover .work-type img,
+.work-list2:hover .work-type video {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -209,7 +211,8 @@
   }
 }
 
-.work-number-name img {
+.work-number-name img,
+.work-number-name video {
   width: 30rem;
   aspect-ratio: 16 / 8;
   object-fit: cover;
@@ -327,7 +330,8 @@
     gap: 30px;
   }
 
-  .work-type img {
+  .work-type img,
+  .work-type video {
     width: 45rem;
     top: -400px;
   }
@@ -407,7 +411,8 @@
     font-size: var(--base-font-size) !important;
   }
 
-  .work-type img {
+  .work-type img,
+  .work-type video {
     display: none;
   }
 
@@ -432,7 +437,8 @@
     width: 400rem;
   }
 
-  .work-number-name img {
+  .work-number-name img,
+  .work-number-name video {
     width: 20rem;
     aspect-ratio: 3 / 2;
     display: block;
@@ -506,7 +512,8 @@
     font-size: var(--base-font-size) !important;
   }
 
-  .work-type img {
+  .work-type img,
+  .work-type video {
     display: none;
   }
 
@@ -528,7 +535,8 @@
     display: none;
   }
 
-  .work-number-name img {
+  .work-number-name img,
+  .work-number-name video {
     display: block;
   }
 
@@ -603,7 +611,8 @@
     font-size: var(--base-font-size) !important;
   }
 
-  .work-type img {
+  .work-type img,
+  .work-type video {
     display: none;
   }
 
@@ -625,7 +634,8 @@
     display: none;
   }
 
-  .work-number-name img {
+  .work-number-name img,
+  .work-number-name video {
     display: block;
     width: 20rem;
   }
@@ -696,7 +706,8 @@
     font-size: var(--base-font-size) !important;
   }
 
-  .work-type img {
+  .work-type img,
+  .work-type video {
     display: none;
   }
 
@@ -721,7 +732,8 @@
     width: 400rem;
   }
 
-  .work-number-name img {
+  .work-number-name img,
+  .work-number-name video {
     width: 20rem;
     aspect-ratio: 3 / 2;
     display: block;
@@ -795,7 +807,8 @@
     font-size: var(--base-font-size) !important;
   }
 
-  .work-type img {
+  .work-type img,
+  .work-type video {
     display: none;
   }
 
@@ -817,7 +830,8 @@
     display: block;
   }
 
-  .work-number-name img {
+  .work-number-name img,
+  .work-number-name video {
     width: 14rem;
     aspect-ratio: 3 / 2;
     display: block;

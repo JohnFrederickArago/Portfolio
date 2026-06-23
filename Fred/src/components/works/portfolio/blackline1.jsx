@@ -9,7 +9,7 @@ import BlacklineImage5 from "../../../assets/works/Blackline - Photo/Blackline6.
 import BlacklineImage6 from "../../../assets/works/Blackline - Photo/Blackline7.jpg";
 
 const BlacklineVideo =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/q_auto/f_auto/v1782066950/BlacklineVideo_r11vdm.mp4";
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782066950/BlacklineVideo_r11vdm.mp4";
 
 function Blackline1() {
   const [isOpen, setIsOpen] = useState(false);

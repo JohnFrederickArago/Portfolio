@@ -11,6 +11,14 @@ import Hermes from "./pages/portfolio/hermes";
 import Blackline from "./pages/portfolio/blackline";
 import Offset from "./pages/portfolio/offset";
 import Adidas from "./pages/portfolio/adidas";
+import ATW from "./pages/portfolio/atw";
+import GTR from "./pages/portfolio/gtr";
+import FOG from "./pages/portfolio/fog";
+import GP25 from "./pages/portfolio/gp25";
+import Offset24 from "./pages/portfolio/offset24";
+import Rosmetic from "./pages/portfolio/rosmetic";
+import Friend from "./pages/portfolio/friend";
+import Xray from "./pages/portfolio/xray";
 
 export default function App() {
   return (
@@ -27,6 +35,14 @@ export default function App() {
           <Route path="/works/blackline" element={<Blackline />} />
           <Route path="/works/offset" element={<Offset />} />
           <Route path="/works/adidas" element={<Adidas />} />
+          <Route path="/works/atw" element={<ATW />} />
+          <Route path="/works/gtr" element={<GTR />} />
+          <Route path="/works/fog" element={<FOG />} />
+          <Route path="/works/gp25" element={<GP25 />} />
+          <Route path="/works/offset24" element={<Offset24 />} />
+          <Route path="/works/rosmetic" element={<Rosmetic />} />
+          <Route path="/works/friend-game" element={<Friend />} />
+          <Route path="/works/xray" element={<Xray />} />
         </Routes>
       </main>
     </div>
