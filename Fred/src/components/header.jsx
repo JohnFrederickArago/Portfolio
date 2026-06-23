@@ -84,7 +84,7 @@ function Header() {
           </motion.div>
           <ul className="b-nav-links">
             <motion.li variants={childVariants}>
-              <NavLink to="/"> Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </motion.li>
             <motion.li variants={childVariants}>
               <NavLink to="/works">Works</NavLink>
