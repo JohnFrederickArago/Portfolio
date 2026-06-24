@@ -30,11 +30,11 @@ function Sisters1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Produced professional headshots and video content for hair product
-              marketing campaigns, handling both shooting and editing. Focused
-              on clean composition, visual storytelling, and brand consistency
-              to enhance product presentation across digital and print
-              platforms.
+              Executed a comprehensive visual strategy by producing high-quality
+              professional headshots and videos tailored for hair product
+              marketing. All phases, from concept to final execution, were
+              meticulously managed to ensure captivating visuals and alignment
+              with the brand’s image for digital and print use.
             </p>
           </div>
           <div className="portfolio-about-right">

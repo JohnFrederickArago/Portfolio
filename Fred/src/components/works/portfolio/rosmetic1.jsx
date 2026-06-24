@@ -29,11 +29,10 @@ function Rosmetic1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Produced and edited video content for a medical center,
-              documenting a clinical procedure through a professional and
-              informative visual approach. The project emphasized clarity,
-              precision, and patient-focused storytelling to support the
-              center's educational and promotional communications.
+              Directed and edited professional-style video footage for a medical
+              center documenting a clinical procedure, emphasizing clarity,
+              conciseness, and a patient-centric narrative for communication and
+              educational purposes.
             </p>
           </div>
           <div className="portfolio-about-right">

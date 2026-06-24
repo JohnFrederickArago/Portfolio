@@ -57,12 +57,11 @@ function Friend1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Co-founded a student game development project and led the creation
-              of its marketing and visual content. Developed social media
-              campaigns, promotional trailers, merchandise designs, and branded
-              graphics to establish a cohesive identity and build audience
-              engagement. Collaborated closely with the team to shape the game's
-              public presence from concept to launch.
+              Co-founded and managed social and visual aspects of the game.
+              Created the game’s visual presence through social media campaigns,
+              game trailers, branded graphics, and merchandise designs and
+              shaped their public facing profile. Worked to develop and present
+              our work to the team from start to launch.
             </p>
           </div>
           <div className="portfolio-about-right">

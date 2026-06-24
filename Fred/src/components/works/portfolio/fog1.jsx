@@ -18,11 +18,10 @@ function FOG1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Created a spec advertising campaign featuring the Fear of God
-              State Jacket, combining model photography and product-focused
-              visuals. Emphasized minimal styling, composition, and mood-driven
-              lighting to reflect the brand’s streetwear identity, producing
-              imagery suited for editorial and campaign use.
+              Conceptualized and executed a spec ad campaign for Fear of God’s
+              State Jacket. With understated styling, composition and moody
+              lighting to align with Fear of God’s streetwear ethos, I created
+              imagery that could exist in an editorial, or campaign landscape.
             </p>
           </div>
           <div className="portfolio-about-right">

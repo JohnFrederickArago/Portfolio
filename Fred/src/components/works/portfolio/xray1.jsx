@@ -29,11 +29,10 @@ function Xray1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Conducted a personal experiment exploring video masking techniques
-              and X-ray-style visual effects. Focused on post-production
-              workflows, layering, and compositing to create a stylized motion
-              sequence, demonstrating experimentation with visual effects and
-              creative editing techniques.
+              Executed a video experiment focused on video mask methods and Xray
+              style imaging as a post production endeavor using layering and
+              compositing in order to generate a styled motion sequence.
+              Experimenting with visual effects.
             </p>
           </div>
           <div className="portfolio-about-right">

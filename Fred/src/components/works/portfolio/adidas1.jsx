@@ -20,11 +20,10 @@ function Adidas1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Developed a conceptual spec advertising campaign combining product
-              photography and graphic design to build a cohesive visual
-              identity. Focused on strong composition, brand storytelling, and
-              polished layout design to create impactful marketing visuals
-              suitable for digital and print applications.
+              Spec ad concept campaign that combined photo and graphic elements
+              for cohesiveness. Highlighted use of motion, a brand story, and
+              clean and uncluttered design layout in developing dynamic
+              marketing images.
             </p>
           </div>
           <div className="portfolio-about-right">

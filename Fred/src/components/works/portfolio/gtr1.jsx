@@ -25,11 +25,12 @@ function GTR1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Captured a launch photoshoot for the Nissan GT-R in collaboration
-              with Flat12, focusing on its performance-driven design, detailing,
-              and presence during the release. Emphasized strong composition and
-              lighting to convey the energy of the launch while highlighting the
-              vehicle’s form and character for promotional and marketing use.
+              Shot a launch photoshoot for the Nissan GT-R in association with
+              Flat12 to highlight the car’s performance focused design, its
+              design detail, and the impression it had at the time of the
+              release. The focus was set upon effective lighting and composition
+              to present the excitement of the launch day while maintaining the
+              character and form of the car and for branding or marketing usage.
             </p>
           </div>
           <div className="portfolio-about-right">

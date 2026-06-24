@@ -28,12 +28,11 @@ function Offset1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Explored automotive culture through a storytelling-driven
-              approach, capturing the details, atmosphere, and human connections
-              that defined the event. Through thoughtful composition and timing,
-              the imagery highlighted the passion, craftsmanship, and community
-              surrounding the showcased vehicles, creating a visual narrative
-              that reflected the unique energy and character of the gathering.
+              Told the story of the automotive community by capturing every bit
+              of character, spirit and emotion behind the event, and
+              highlighting the passion, the artistry and people that made it so
+              special through clever compositions and carefully selected moments
+              in time.
             </p>
           </div>
           <div className="portfolio-about-right">

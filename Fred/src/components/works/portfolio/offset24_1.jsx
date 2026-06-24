@@ -26,12 +26,11 @@ function Offset24_1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Documented the energy and culture of a large-scale automotive
-              gathering through a series of storytelling-driven photographs.
-              Focused on composition, atmosphere, and human interaction to
-              capture the relationship between enthusiasts and their vehicles,
-              creating a visual narrative that reflected the character and
-              spirit of the event.
+              Recorded the pulse and spirit of a major automotive convention
+              through a story told in photos. I worked with focus on
+              composition, atmosphere and the relationship of individuals and
+              their vehicles to illustrate how people engage with their
+              machines.
             </p>
           </div>
           <div className="portfolio-about-right">

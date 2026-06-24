@@ -27,10 +27,11 @@ function Hermes1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Created premium photo and video content showcasing a luxury
-              watersports experience, combining cinematic visuals and refined
-              storytelling to highlight performance, lifestyle, and brand
-              identity across digital platforms.
+              Developed premium photo & videography content, creating an
+              immersive lifestyle of a luxury watersports brand experience by
+              utilizing cinematic footage and high-level messaging that
+              encapsulates their performance, lifestyle, and brand ethos on
+              digital platforms.
             </p>
           </div>
           <div className="portfolio-about-right">

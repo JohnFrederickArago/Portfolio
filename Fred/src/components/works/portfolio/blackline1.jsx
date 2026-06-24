@@ -33,11 +33,11 @@ function Blackline1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Created automotive visual content for Blackline Motor Company,
-              capturing a featured vehicle in a controlled garage environment.
-              Focused on cinematic lighting, detail-driven composition, and a
-              cohesive visual style to highlight the car’s design, texture, and
-              presence for brand and promotional use.
+              Produced automotive visuals for Blackline Motor Company. Featuring
+              a commissioned vehicle within a controlled studio/garage setting.
+              Utilised cinematic lighting techniques, considered close-ups, and
+              maintained a consistent aesthetic to showcase the car's design,
+              texture and overall presence for brand/promotional material.
             </p>
           </div>
           <div className="portfolio-about-right">

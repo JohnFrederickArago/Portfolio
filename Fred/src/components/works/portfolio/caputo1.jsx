@@ -34,11 +34,11 @@ function Caputo1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Captured event and booth photography, documenting key moments,
-              audience engagement, and brand interactions throughout the
-              activation. Focused on authentic storytelling and strong visual
-              composition to reflect the atmosphere, energy, and impact of the
-              event across promotional and marketing use.
+              Photo-evidencing the key activations in a live capturing of event
+              and booth activities; to provide coverage of interaction points,
+              audience and client experiences during the campaign to create
+              rich, emotive narratives with exceptional visual storytelling for
+              marketing purposes.
             </p>
           </div>
           <div className="portfolio-about-right">

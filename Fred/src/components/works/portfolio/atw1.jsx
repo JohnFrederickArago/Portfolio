@@ -22,12 +22,12 @@ function ATW1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Worked as a Marketing & Design Intern, supporting the creation of
-              branded visual content across print and digital platforms.
-              Designed marketing collateral such as brochures, developed social
-              media assets, and contributed to establishing brand guidelines to
-              ensure a consistent and cohesive visual identity across all
-              communications.
+              Marketing and design intern responsible for all branding &
+              collateral work, both print and digital, the majority of it was
+              visually led. Designed and delivered marketing collateral
+              including brochures, social media content, and assisting in
+              developing brand guidelines for a consistent brand aesthetic
+              across all platforms.
             </p>
           </div>
           <div className="portfolio-about-right">

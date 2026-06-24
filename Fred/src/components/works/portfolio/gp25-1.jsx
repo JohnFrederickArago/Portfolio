@@ -23,11 +23,11 @@ function GP25_1() {
         <div className="portfolio-about">
           <div className="portfolio-about-left">
             <p>
-              Shot and edited video coverage for a car exhibition at Grand
-              Picnic, capturing showcased vehicles, crowd engagement, and the
-              overall atmosphere of the event. Focused on dynamic movement,
-              pacing, and cinematic framing to create an engaging visual
-              narrative for promotional and digital use.
+              Video creation and post production support for the car exhibition
+              at Grand Picnic; recording displayed automobiles, interacting
+              guests, the buzz and atmosphere. Visuals are comprised of motion,
+              rhythm and framing; intended to support marketing and online
+              content.
             </p>
           </div>
           <div className="portfolio-about-right">
