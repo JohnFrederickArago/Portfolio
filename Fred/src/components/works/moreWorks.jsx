@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useMemo } from "react";
 
 import Sisters from "../../assets/works/Sisters - Photo/Sisters1.jpg";
 import Caputo from "../../assets/works/Caputo - Photo/Caputo1.jpg";
@@ -53,17 +54,19 @@ function MoreWorks() {
     { video: XRay, title: "VISUAL EFFECT EXPERIMENT", to: "/works/xray" },
   ];
 
-  const getWorkSortKey = (work) =>
-    work.to
-      .split("")
-      .reduce(
-        (hash, character) => (hash * 31 + character.charCodeAt(0)) >>> 0,
-        0,
-      );
+  const randomWorks = useMemo(() => {
+    const shuffledWorks = [...works];
 
-  const randomWorks = [...works]
-    .sort((left, right) => getWorkSortKey(left) - getWorkSortKey(right))
-    .slice(0, 3);
+    for (let i = shuffledWorks.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledWorks[i], shuffledWorks[j]] = [
+        shuffledWorks[j],
+        shuffledWorks[i],
+      ];
+    }
+
+    return shuffledWorks.slice(0, 3);
+  }, []);
 
   return (
     <div className="more-works-container">
