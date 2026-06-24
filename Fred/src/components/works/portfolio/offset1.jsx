@@ -62,20 +62,90 @@ function Offset1() {
         </div>
 
         <div className="landscape-img-list">
-          <img src={OffsetImage1} alt="Offset Work 1" />
-          <img src={OffsetImage2} alt="Offset Work 2" />
-          <img src={OffsetImage3} alt="Offset Work 3" />
-          <img src={OffsetImage4} alt="Offset Work 4" />
-          <img src={OffsetImage5} alt="Offset Work 5" />
-          <img src={OffsetImage6} alt="Offset Work 6" />
-          <img src={OffsetImage8} alt="Offset Work 7" />
-          <img src={OffsetImage9} alt="Offset Work 8" />
-          <img src={OffsetImage10} alt="Offset Work 9" />
-          <img src={OffsetImage11} alt="Offset Work 11" />
-          <img src={OffsetImage12} alt="Offset Work 12" />
-          <img src={OffsetImage13} alt="Offset Work 13" />
-          <img src={OffsetImage14} alt="Offset Work 14" />
-          <img src={OffsetImage15} alt="Offset Work 15" />
+          <img
+            src={OffsetImage1}
+            alt="Offset Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage2}
+            alt="Offset Work 2"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage3}
+            alt="Offset Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage4}
+            alt="Offset Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage5}
+            alt="Offset Work 5"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage6}
+            alt="Offset Work 6"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage8}
+            alt="Offset Work 7"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage9}
+            alt="Offset Work 8"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage10}
+            alt="Offset Work 9"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage11}
+            alt="Offset Work 11"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage12}
+            alt="Offset Work 12"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage13}
+            alt="Offset Work 13"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage14}
+            alt="Offset Work 14"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={OffsetImage15}
+            alt="Offset Work 15"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </>

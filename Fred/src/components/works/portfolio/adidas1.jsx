@@ -62,14 +62,39 @@ function Adidas1() {
         </div>
 
         <div className="square-img-list">
-          <img src={AdidasImage1} alt="Adidas Work 1" />
-          <img src={AdidasImage2} alt="Adidas Work 2" />
-          <img src={AdidasImage3} alt="Adidas Work 3" />
-          <img src={AdidasImage4} alt="Adidas Work 4" />
+          <img
+            src={AdidasImage1}
+            alt="Adidas Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={AdidasImage2}
+            alt="Adidas Work 2"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={AdidasImage3}
+            alt="Adidas Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={AdidasImage4}
+            alt="Adidas Work 4"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="square-img-ind">
-          <img src={AdidasImage5} alt="Adidas Work 5" />
+          <img
+            src={AdidasImage5}
+            alt="Adidas Work 5"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </>

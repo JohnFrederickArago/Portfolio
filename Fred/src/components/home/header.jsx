@@ -168,6 +168,8 @@ function Header() {
               duration: 0.8,
               ease: [0.22, 1, 0.36, 1],
             }}
+            fetchPriority="high"
+            decoding="async"
           />
 
           <div className="hero-text">

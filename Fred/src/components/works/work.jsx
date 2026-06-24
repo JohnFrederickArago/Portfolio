@@ -65,6 +65,8 @@ function Work() {
                 src={Sisters}
                 alt="Sisters Work Preview"
                 className="sisters-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -77,6 +79,8 @@ function Work() {
                 src={Sisters}
                 alt="Sisters Work Preview"
                 className="sisters-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -103,6 +107,8 @@ function Work() {
                 src={Caputo}
                 alt="Caputo Work Preview"
                 className="caputo-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -115,6 +121,8 @@ function Work() {
                 src={Caputo}
                 alt="Caputo Work Preview"
                 className="caputo-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -141,6 +149,8 @@ function Work() {
                 src={Friend}
                 alt="Friend Work Preview"
                 className="friend-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -153,6 +163,8 @@ function Work() {
                 src={Friend}
                 alt="Friend Work Preview"
                 className="friend-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -180,6 +192,8 @@ function Work() {
                 src={Hermes}
                 alt="Hermes Work Preview"
                 className="hermes-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -192,6 +206,8 @@ function Work() {
                 src={Hermes}
                 alt="Hermes Work Preview"
                 className="hermes-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -219,6 +235,8 @@ function Work() {
                 src={Blackline}
                 alt="Blackline Work Preview"
                 className="blackline-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -231,6 +249,8 @@ function Work() {
                 src={Blackline}
                 alt="Blackline Work Preview"
                 className="blackline-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -258,6 +278,8 @@ function Work() {
                 src={Offset}
                 alt="Offset Work Preview"
                 className="offset-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -269,6 +291,8 @@ function Work() {
                 src={Offset}
                 alt="Offset Work Preview"
                 className="offset-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -292,7 +316,13 @@ function Work() {
               </div>
               <p>MARKETING DESIGN INTERN</p>
 
-              <img src={ATW} alt="ATW Work Preview" className="atw-image" />
+              <img
+                src={ATW}
+                alt="ATW Work Preview"
+                className="atw-image"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="work-type">
@@ -300,7 +330,13 @@ function Work() {
               <p>GRAPHIC DESIGN</p>
               <p>BRAND DESIGN</p>
 
-              <img src={ATW} alt="ATW Work Preview" className="atw-image" />
+              <img
+                src={ATW}
+                alt="ATW Work Preview"
+                className="atw-image"
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="work-year-type">
                 <p>2025</p>
@@ -323,7 +359,13 @@ function Work() {
               </div>
               <p>EDITORIAL FASHION SHOOT</p>
 
-              <img src={FOG} alt="FOG Work Preview" className="fog-image" />
+              <img
+                src={FOG}
+                alt="FOG Work Preview"
+                className="fog-image"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="work-type">
@@ -331,7 +373,13 @@ function Work() {
               <p>EDITORIAL</p>
               <p>PHOTOGRAPHY</p>
 
-              <img src={FOG} alt="FOG Work Preview" className="fog-image" />
+              <img
+                src={FOG}
+                alt="FOG Work Preview"
+                className="fog-image"
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="work-year-type">
                 <p>2025</p>
@@ -353,14 +401,28 @@ function Work() {
                 <p>'25 GRAND PICNIC EXHIBITION</p>
               </div>
               <p>'25 GRAND PICNIC EXHIBITION</p>
-              <video src={GP25} loop autoPlay muted playsInline />
+              <video
+                src={GP25}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+              />
             </div>
 
             <div className="work-type">
               <p>VIDEOGRAPHY</p>
               <p>EDITING</p>
 
-              <video src={GP25} loop autoPlay muted playsInline />
+              <video
+                src={GP25}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+              />
 
               <div className="work-year-type">
                 <p>2025</p>
@@ -382,7 +444,14 @@ function Work() {
                 <p>CLINICAL OPERATIONS</p>
               </div>
               <p>CLINICAL OPERATIONS</p>
-              <video src={Rosmetic} loop autoPlay muted playsInline />
+              <video
+                src={Rosmetic}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+              />
             </div>
 
             <div className="work-type">
@@ -390,7 +459,14 @@ function Work() {
               <p>HEALTHCARE</p>
               <p>CONTENT</p>
 
-              <video src={Rosmetic} loop autoPlay muted playsInline />
+              <video
+                src={Rosmetic}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+              />
 
               <div className="work-year-type">
                 <p>2025</p>
@@ -412,7 +488,14 @@ function Work() {
                 <p>VISUAL EFFECT EXPERIMENT</p>
               </div>
               <p>VISUAL EFFECT EXPERIMENT</p>
-              <video src={XRay} loop autoPlay muted playsInline />
+              <video
+                src={XRay}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+              />
             </div>
 
             <div className="work-type">
@@ -420,7 +503,14 @@ function Work() {
               <p>EDITING</p>
               <p>CONTENT</p>
 
-              <video src={XRay} loop autoPlay muted playsInline />
+              <video
+                src={XRay}
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload="none"
+              />
 
               <div className="work-year-type">
                 <p>2024</p>
@@ -447,6 +537,8 @@ function Work() {
                 src={Adidas}
                 alt="Adidas Work Preview"
                 className="adidas-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -460,6 +552,8 @@ function Work() {
                 src={Adidas}
                 alt="Adidas Work Preview"
                 className="adidas-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -487,6 +581,8 @@ function Work() {
                 src={Offset24}
                 alt="Offset24 Work Preview"
                 className="offset24-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -498,6 +594,8 @@ function Work() {
                 src={Offset24}
                 alt="Offset24 Work Preview"
                 className="offset24-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="work-year-type">
@@ -521,7 +619,13 @@ function Work() {
               </div>
               <p>GT-R RELEASE EVENT</p>
 
-              <img src={GTR} alt="GTR Work Preview" className="gtr-image" />
+              <img
+                src={GTR}
+                alt="GTR Work Preview"
+                className="gtr-image"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="work-type">
@@ -529,7 +633,13 @@ function Work() {
               <p>PHOTOGRAPHY</p>
               <p>COMPOSITION</p>
 
-              <img src={GTR} alt="GTR Work Preview" className="gtr-image" />
+              <img
+                src={GTR}
+                alt="GTR Work Preview"
+                className="gtr-image"
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="work-year-type">
                 <p>2024</p>

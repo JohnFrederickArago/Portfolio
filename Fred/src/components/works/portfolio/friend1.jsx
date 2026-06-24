@@ -87,12 +87,42 @@ function Friend1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={FriendImage5} alt="Friend Work 5" />
-          <img src={FriendImage6} alt="Friend Work 6" />
-          <img src={FriendImage1} alt="Friend Work 1" />
-          <img src={FriendImage2} alt="Friend Work 2" />
-          <img src={FriendImage3} alt="Friend Work 3" />
-          <img src={FriendImage7} alt="Friend Work 7" />
+          <img
+            src={FriendImage5}
+            alt="Friend Work 5"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage6}
+            alt="Friend Work 6"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage1}
+            alt="Friend Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage2}
+            alt="Friend Work 2"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage3}
+            alt="Friend Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage7}
+            alt="Friend Work 7"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div
@@ -133,10 +163,30 @@ function Friend1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={FriendImage4} alt="Friend Work 4" />
-          <img src={FriendImage9} alt="Friend Work 9" />
-          <img src={FriendImage10} alt="Friend Work 10" />
-          <img src={FriendImage12} alt="Friend Work 12" />
+          <img
+            src={FriendImage4}
+            alt="Friend Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage9}
+            alt="Friend Work 9"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage10}
+            alt="Friend Work 10"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FriendImage12}
+            alt="Friend Work 12"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div
           className="video-thumb"

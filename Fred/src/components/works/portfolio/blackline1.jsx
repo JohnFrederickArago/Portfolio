@@ -60,10 +60,30 @@ function Blackline1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={BlacklineImage3} alt="Blackline Work 3" />
-          <img src={BlacklineImage4} alt="Blackline Work 4" />
-          <img src={BlacklineImage1} alt="Blackline Work 1" />
-          <img src={BlacklineImage5} alt="Blackline Work 5" />
+          <img
+            src={BlacklineImage3}
+            alt="Blackline Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={BlacklineImage4}
+            alt="Blackline Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={BlacklineImage1}
+            alt="Blackline Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={BlacklineImage5}
+            alt="Blackline Work 5"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         {/* VIDEO THUMBNAIL */}
@@ -73,11 +93,21 @@ function Blackline1() {
         </div>
 
         <div className="landscape-img">
-          <img src={BlacklineImage6} alt="Blackline Work 6" />
+          <img
+            src={BlacklineImage6}
+            alt="Blackline Work 6"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="landscape-img">
-          <img src={BlacklineImage2} alt="Blackline Work 2" />
+          <img
+            src={BlacklineImage2}
+            alt="Blackline Work 2"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 

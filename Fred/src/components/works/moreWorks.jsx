@@ -71,14 +71,19 @@ function MoreWorks() {
             {work.video ? (
               <video
                 src={work.video}
-                alt={work.title}
                 loop
                 autoPlay
                 muted
                 playsInline
+                preload="none"
               />
             ) : (
-              <img src={work.img} alt={work.title} />
+              <img
+                src={work.img}
+                alt={work.title}
+                loading="lazy"
+                decoding="async"
+              />
             )}
             <p className="img-title">{work.title}</p>
           </NavLink>

@@ -56,17 +56,59 @@ function ATW1() {
         </div>
 
         <div className="landscape-img-list">
-          <img src={ATWImage1} alt="ATW Work 1" className="landscape2" />
-          <img src={ATWImage2} alt="ATW Work 2" className="landscape2" />
+          <img
+            src={ATWImage1}
+            alt="ATW Work 1"
+            className="landscape2"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={ATWImage2}
+            alt="ATW Work 2"
+            className="landscape2"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="portfolio-works">
-          <img src={ATWImage3} alt="ATW Work 3" />
-          <img src={ATWImage4} alt="ATW Work 4" />
-          <img src={ATWImage5} alt="ATW Work 5" />
-          <img src={ATWImage6} alt="ATW Work 6" />
-          <img src={ATWImage7} alt="ATW Work 7" />
-          <img src={ATWImage8} alt="ATW Work 8" />
+          <img
+            src={ATWImage3}
+            alt="ATW Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={ATWImage4}
+            alt="ATW Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={ATWImage5}
+            alt="ATW Work 5"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={ATWImage6}
+            alt="ATW Work 6"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={ATWImage7}
+            alt="ATW Work 7"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={ATWImage8}
+            alt="ATW Work 8"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </>

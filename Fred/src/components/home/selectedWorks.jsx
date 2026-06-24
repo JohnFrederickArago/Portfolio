@@ -91,6 +91,8 @@ function SelectedWorks() {
                       src={Sisters}
                       alt="Sisters Work Preview"
                       className="sisters-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 </div>
@@ -145,6 +147,8 @@ function SelectedWorks() {
                       src={Caputo}
                       alt="Caputo Work Preview"
                       className="caputo-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 </div>
@@ -203,6 +207,8 @@ function SelectedWorks() {
                       src={Hermes}
                       alt="Hermes Work Preview"
                       className="hermes-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 </div>
@@ -259,6 +265,8 @@ function SelectedWorks() {
                       src={Blackline}
                       alt="Blackline Work Preview"
                       className="blackline-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 </div>
@@ -314,6 +322,8 @@ function SelectedWorks() {
                       src={Offset}
                       alt="Offset Work Preview"
                       className="offset-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 </div>
@@ -369,6 +379,8 @@ function SelectedWorks() {
                       src={Adidas}
                       alt="Adidas Work Preview"
                       className="adidas-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </motion.div>
                 </div>

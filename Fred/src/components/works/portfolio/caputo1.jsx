@@ -62,8 +62,18 @@ function Caputo1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={CaputoImage5} alt="Caputo Work 5" />
-          <img src={CaputoImage6} alt="Caputo Work 6" />
+          <img
+            src={CaputoImage5}
+            alt="Caputo Work 5"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={CaputoImage6}
+            alt="Caputo Work 6"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         {/* VIDEO THUMBNAIL */}
@@ -73,29 +83,72 @@ function Caputo1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={CaputoImage3} alt="Caputo Work 3" />
-          <img src={CaputoImage2} alt="Caputo Work 2" />
+          <img
+            src={CaputoImage3}
+            alt="Caputo Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={CaputoImage2}
+            alt="Caputo Work 2"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="landscape-img">
-          <img src={CaputoImage4} alt="Caputo Work 4" />
+          <img
+            src={CaputoImage4}
+            alt="Caputo Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div className="portfolio-works">
+          <img
+            src={CaputoImage1}
+            alt="Caputo Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={CaputoImage7}
+            alt="Caputo Work 7"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div className="landscape-img">
+          <img
+            src={CaputoImage10}
+            alt="Caputo Work 10"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="portfolio-works">
-          <img src={CaputoImage1} alt="Caputo Work 1" />
-          <img src={CaputoImage7} alt="Caputo Work 7" />
+          <img
+            src={CaputoImage8}
+            alt="Caputo Work 8"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={CaputoImage11}
+            alt="Caputo Work 11"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
-
         <div className="landscape-img">
-          <img src={CaputoImage10} alt="Caputo Work 10" />
-        </div>
-
-        <div className="portfolio-works">
-          <img src={CaputoImage8} alt="Caputo Work 8" />
-          <img src={CaputoImage11} alt="Caputo Work 11" />
-        </div>
-        <div className="landscape-img">
-          <img src={CaputoImage9} alt="Caputo Work 9" />
+          <img
+            src={CaputoImage9}
+            alt="Caputo Work 9"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 

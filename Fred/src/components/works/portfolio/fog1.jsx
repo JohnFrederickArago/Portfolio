@@ -51,10 +51,30 @@ function FOG1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={FOGImage2} alt="FOG Work 2" />
-          <img src={FOGImage4} alt="FOG Work 4" />
-          <img src={FOGImage1} alt="FOG Work 1" />
-          <img src={FOGImage3} alt="FOG Work 3" />
+          <img
+            src={FOGImage2}
+            alt="FOG Work 2"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FOGImage4}
+            alt="FOG Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FOGImage1}
+            alt="FOG Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={FOGImage3}
+            alt="FOG Work 3"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </>

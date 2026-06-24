@@ -59,8 +59,18 @@ function Sisters1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={SistersImage1} alt="Sister Work 1" />
-          <img src={SistersImage7} alt="Sister Work 7" />
+          <img
+            src={SistersImage1}
+            alt="Sister Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={SistersImage7}
+            alt="Sister Work 7"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         {/* VIDEO THUMBNAIL */}
@@ -70,14 +80,39 @@ function Sisters1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={SistersImage3} alt="Sister Work 3" />
-          <img src={SistersImage4} alt="Sister Work 4" />
-          <img src={SistersImage5} alt="Sister Work 5" />
-          <img src={SistersImage6} alt="Sister Work 6" />
+          <img
+            src={SistersImage3}
+            alt="Sister Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={SistersImage4}
+            alt="Sister Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={SistersImage5}
+            alt="Sister Work 5"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={SistersImage6}
+            alt="Sister Work 6"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="landscape-img">
-          <img src={SistersImage2} alt="Sister Work 2" />
+          <img
+            src={SistersImage2}
+            alt="Sister Work 2"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 

@@ -53,8 +53,18 @@ function Hermes1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={HermesImage3} alt="Hermes Work 3" />
-          <img src={HermesImage4} alt="Hermes Work 4" />
+          <img
+            src={HermesImage3}
+            alt="Hermes Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={HermesImage4}
+            alt="Hermes Work 4"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         {/* VIDEO THUMBNAIL */}
@@ -64,8 +74,18 @@ function Hermes1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={HermesImage1} alt="Hermes Work 1" />
-          <img src={HermesImage2} alt="Hermes Work 2" />
+          <img
+            src={HermesImage1}
+            alt="Hermes Work 1"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={HermesImage2}
+            alt="Hermes Work 2"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 

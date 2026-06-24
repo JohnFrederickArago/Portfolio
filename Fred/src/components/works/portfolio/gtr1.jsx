@@ -58,23 +58,78 @@ function GTR1() {
         </div>
 
         <div className="portfolio-works">
-          <img src={GTRImage3} alt="GTR Work 3" />
-          <img src={GTRImage4} alt="GTR Work 4" />
-          <img src={GTRImage5} alt="GTR Work 5" />
-          <img src={GTRImage6} alt="GTR Work 6" />
+          <img
+            src={GTRImage3}
+            alt="GTR Work 3"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage4}
+            alt="GTR Work 4"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage5}
+            alt="GTR Work 5"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage6}
+            alt="GTR Work 6"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="landscape-img">
-          <img src={GTRImage1} alt="GTR Work 1" />
+          <img
+            src={GTRImage1}
+            alt="GTR Work 1"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="portfolio-works">
-          <img src={GTRImage2} alt="GTR Work 2" />
-          <img src={GTRImage7} alt="GTR Work 7" />
-          <img src={GTRImage8} alt="GTR Work 8" />
-          <img src={GTRImage9} alt="GTR Work 9" />
-          <img src={GTRImage10} alt="GTR Work 10" />
-          <img src={GTRImage11} alt="GTR Work 11" />
+          <img
+            src={GTRImage2}
+            alt="GTR Work 2"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage7}
+            alt="GTR Work 7"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage8}
+            alt="GTR Work 8"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage9}
+            alt="GTR Work 9"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage10}
+            alt="GTR Work 10"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={GTRImage11}
+            alt="GTR Work 11"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </>
