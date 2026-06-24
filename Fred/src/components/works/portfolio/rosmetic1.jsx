@@ -15,7 +15,14 @@ function Rosmetic1() {
           <p>CLINICAL OPERATIONS</p>
         </div>
         <div className="video-thumb-hero" onClick={() => setIsOpen(true)}>
-          <video src={Hero} muted />
+          <video
+            src={Hero}
+            muted
+            preload="metadata"
+            onLoadedMetadata={(e) => {
+              e.target.currentTime = 25; // jump to 1 second frame
+            }}
+          />
           <div className="play-button">▶</div>
         </div>
 

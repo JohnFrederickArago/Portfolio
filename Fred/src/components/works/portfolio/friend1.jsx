@@ -134,7 +134,7 @@ function Friend1() {
             muted
             preload="metadata"
             onLoadedMetadata={(e) => {
-              e.target.currentTime = 26; // jump to 1 second frame
+              e.target.currentTime = 26;
             }}
           />
           <div className="play-button">▶</div>
