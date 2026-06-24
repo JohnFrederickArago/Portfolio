@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 function ContactMe() {
@@ -80,9 +80,24 @@ function ContactMe() {
 
           <div className="socials">
             <p className="gray">SOCIALS</p>
-            <p>Instagram</p>
-            <p>BeHance</p>
-            <p>LinkedIn</p>
+            <p>
+              <a
+                href="https://www.instagram.com/_fredricc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/frederickarago"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </p>
           </div>
 
           <div className="contact-us">

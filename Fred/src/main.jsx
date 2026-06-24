@@ -1,6 +1,7 @@
-import React from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 import App from "./app.jsx";
 import SmoothScrollLayout from "./SmoothScrollLayout.jsx";
@@ -15,14 +16,16 @@ import "./styles/contact.css";
 import "./styles/portfolio/portfolio.css";
 
 createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <LenisProvider>
-        <ScrollToTop />
-        <SmoothScrollLayout>
-          <App />
-        </SmoothScrollLayout>
-      </LenisProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <StrictMode>
+    <LazyMotion features={domAnimation} strict>
+      <BrowserRouter>
+        <LenisProvider>
+          <ScrollToTop />
+          <SmoothScrollLayout>
+            <App />
+          </SmoothScrollLayout>
+        </LenisProvider>
+      </BrowserRouter>
+    </LazyMotion>
+  </StrictMode>,
 );

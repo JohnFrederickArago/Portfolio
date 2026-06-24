@@ -1,4 +1,3 @@
-import React from "react";
 import ParagraphReveal from "../../animations/components/ParagraphReveal";
 import PerLetterReveal from "../../animations/components/PerLetterReveal";
 

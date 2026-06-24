@@ -1,7 +1,12 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
+import { m as motion } from "framer-motion";
+import { getOptimizedVideoSrc } from "../../utils/optimizedVideo";
 
-import { motion } from "framer-motion";
+import { itemVariants } from "../../animations/variants/works/itemVariants";
+import { staggerParent } from "../../animations/variants/works/staggerParent";
+import { childVariants } from "../../animations/variants/works/childVariants";
+import { imageVariants } from "../../animations/variants/works/imageVariants";
+
 import Sisters from "../../assets/works/Sisters - Photo/Sisters1.jpg";
 import Caputo from "../../assets/works/Caputo - Photo/Caputo1.jpg";
 import Blackline from "../../assets/works/Blackline - Photo/Blackline1.jpg";
@@ -12,16 +17,21 @@ import Adidas from "../../assets/works/Adidas Climacool - Photo/Climacool-Design
 import ATW from "../../assets/works/ATW - Graphic Design/Post2.jpg";
 import GTR from "../../assets/works/Flat 12 - Photo/Flat12.11.jpg";
 import FOG from "../../assets/works/FOG State - Photo/Post - Fear of God-04.jpg";
-const GP25 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4";
+const GP25 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4",
+);
 import Offset24 from "../../assets/works/Offset '24 - Photo/Offset24.6.jpg";
-const Rosmetic =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov";
+const Rosmetic = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov",
+);
 import Friend from "../../assets/works/The FriEND Game Launch/11.1 - Release.png";
-const XRay =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4";
+const XRay = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4",
+);
 
 function Work() {
+  const viewport = { once: true, margin: "-70px 0px -10px 0px" };
+
   return (
     <>
       <div className="works-container2">
@@ -30,8 +40,14 @@ function Work() {
           <p className="gray2">(22-26)</p>
         </div>
 
-        <div className="work-list-container">
-          <div className="work-list2">
+        <motion.div
+          className="work-list-container"
+          variants={staggerParent}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+        >
+          <div className="work-list-card">
             <div className="work-number-name">
               <p className="gray">#</p>
 
@@ -54,603 +70,625 @@ function Work() {
           <hr />
 
           <NavLink to="/works/sisters" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">01</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">01</p>
+                <div className="number-name-sub">
+                  <p className="gray">01</p>
+                  <p>'26 SUMMER HAIR COLLECTION</p>
+                </div>
                 <p>'26 SUMMER HAIR COLLECTION</p>
+                <img
+                  src={Sisters}
+                  alt="Sisters Work Preview"
+                  className="sisters-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>'26 SUMMER HAIR COLLECTION</p>
-              <img
-                src={Sisters}
-                alt="Sisters Work Preview"
-                className="sisters-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>MODEL PHOTOGRAPHY</p>
+                <p>VIDEO PRODUCTION</p>
+                <p>LIGHTING DIRECTION</p>
 
-            <div className="work-type">
-              <p>MODEL PHOTOGRAPHY</p>
-              <p>VIDEO PRODUCTION</p>
-              <p>LIGHTING DIRECTION</p>
+                <img
+                  src={Sisters}
+                  alt="Sisters Work Preview"
+                  className="sisters-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={Sisters}
-                alt="Sisters Work Preview"
-                className="sisters-image"
-                loading="lazy"
-                decoding="async"
-              />
-
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2026</p>
+                </div>
+              </div>
+              <div className="work-year">
                 <p>2026</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2026</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/caputo" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">02</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">02</p>
+                <div className="number-name-sub">
+                  <p className="gray">02</p>
+                  <p>EVENT HIGHLIGHT COLLECTION</p>
+                </div>
                 <p>EVENT HIGHLIGHT COLLECTION</p>
+                <img
+                  src={Caputo}
+                  alt="Caputo Work Preview"
+                  className="caputo-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>EVENT HIGHLIGHT COLLECTION</p>
-              <img
-                src={Caputo}
-                alt="Caputo Work Preview"
-                className="caputo-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
 
-            <div className="work-type">
-              <p>EVENT COVERAGE</p>
-              <p>PHOTOGRAPHY</p>
-              <p>VIDEOGRAPHY</p>
+              <div className="work-type">
+                <p>EVENT COVERAGE</p>
+                <p>PHOTOGRAPHY</p>
+                <p>VIDEOGRAPHY</p>
 
-              <img
-                src={Caputo}
-                alt="Caputo Work Preview"
-                className="caputo-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <img
+                  src={Caputo}
+                  alt="Caputo Work Preview"
+                  className="caputo-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2026</p>
+                </div>
+              </div>
+
+              <div className="work-year">
                 <p>2026</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2026</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/friend-game" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">03</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">03</p>
+                <div className="number-name-sub">
+                  <p className="gray">03</p>
+                  <p>THE FRIEND — CREATIVE MARKETING</p>
+                </div>
                 <p>THE FRIEND — CREATIVE MARKETING</p>
+                <img
+                  src={Friend}
+                  alt="Friend Work Preview"
+                  className="friend-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>THE FRIEND — CREATIVE MARKETING</p>
-              <img
-                src={Friend}
-                alt="Friend Work Preview"
-                className="friend-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
 
-            <div className="work-type">
-              <p>MOTION GRAPHICS</p>
-              <p>GRAPHIC DESIGN</p>
-              <p>CINEMATOGRAPHY</p>
+              <div className="work-type">
+                <p>MOTION GRAPHICS</p>
+                <p>GRAPHIC DESIGN</p>
+                <p>CINEMATOGRAPHY</p>
 
-              <img
-                src={Friend}
-                alt="Friend Work Preview"
-                className="friend-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <img
+                  src={Friend}
+                  alt="Friend Work Preview"
+                  className="friend-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2026</p>
+                </div>
+              </div>
+
+              <div className="work-year">
                 <p>2026</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2026</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/hermes" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">04</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">04</p>
+                <div className="number-name-sub">
+                  <p className="gray">04</p>
+                  <p>MARINE LIFESTYLE SHOOT</p>
+                </div>
                 <p>MARINE LIFESTYLE SHOOT</p>
+
+                <img
+                  src={Hermes}
+                  alt="Hermes Work Preview"
+                  className="hermes-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>MARINE LIFESTYLE SHOOT</p>
 
-              <img
-                src={Hermes}
-                alt="Hermes Work Preview"
-                className="hermes-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>BRAND PHOTOGRAPHY</p>
+                <p>VIDEO PRODUCTION</p>
+                <p>CONTENT</p>
 
-            <div className="work-type">
-              <p>BRAND PHOTOGRAPHY</p>
-              <p>VIDEO PRODUCTION</p>
-              <p>CONTENT</p>
+                <img
+                  src={Hermes}
+                  alt="Hermes Work Preview"
+                  className="hermes-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={Hermes}
-                alt="Hermes Work Preview"
-                className="hermes-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/blackline" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">05</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">05</p>
+                <div className="number-name-sub">
+                  <p className="gray">05</p>
+                  <p>AUTOMOTIVE STUDIO VISUALS</p>
+                </div>
                 <p>AUTOMOTIVE STUDIO VISUALS</p>
+
+                <img
+                  src={Blackline}
+                  alt="Blackline Work Preview"
+                  className="blackline-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>AUTOMOTIVE STUDIO VISUALS</p>
 
-              <img
-                src={Blackline}
-                alt="Blackline Work Preview"
-                className="blackline-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>VIDEOGRAPHY</p>
+                <p>PHOTOGRAPHY</p>
+                <p>POST PRODUCTION</p>
 
-            <div className="work-type">
-              <p>VIDEOGRAPHY</p>
-              <p>PHOTOGRAPHY</p>
-              <p>POST PRODUCTION</p>
+                <img
+                  src={Blackline}
+                  alt="Blackline Work Preview"
+                  className="blackline-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={Blackline}
-                alt="Blackline Work Preview"
-                className="blackline-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/offset" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">06</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">06</p>
+                <div className="number-name-sub">
+                  <p className="gray">06</p>
+                  <p>'25 CAR CULTURE EXHIBITION</p>
+                </div>
                 <p>'25 CAR CULTURE EXHIBITION</p>
+
+                <img
+                  src={Offset}
+                  alt="Offset Work Preview"
+                  className="offset-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>'25 CAR CULTURE EXHIBITION</p>
 
-              <img
-                src={Offset}
-                alt="Offset Work Preview"
-                className="offset-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>VISUAL STORYTELLING</p>
+                <p>COMPOSITION</p>
 
-            <div className="work-type">
-              <p>VISUAL STORYTELLING</p>
-              <p>COMPOSITION</p>
+                <img
+                  src={Offset}
+                  alt="Offset Work Preview"
+                  className="offset-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={Offset}
-                alt="Offset Work Preview"
-                className="offset-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/atw" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">07</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">07</p>
+                <div className="number-name-sub">
+                  <p className="gray">07</p>
+                  <p>MARKETING DESIGN INTERN</p>
+                </div>
                 <p>MARKETING DESIGN INTERN</p>
+
+                <img
+                  src={ATW}
+                  alt="ATW Work Preview"
+                  className="atw-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>MARKETING DESIGN INTERN</p>
 
-              <img
-                src={ATW}
-                alt="ATW Work Preview"
-                className="atw-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>MARKETING DESIGN</p>
+                <p>GRAPHIC DESIGN</p>
+                <p>BRAND DESIGN</p>
 
-            <div className="work-type">
-              <p>MARKETING DESIGN</p>
-              <p>GRAPHIC DESIGN</p>
-              <p>BRAND DESIGN</p>
+                <img
+                  src={ATW}
+                  alt="ATW Work Preview"
+                  className="atw-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={ATW}
-                alt="ATW Work Preview"
-                className="atw-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/fog" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">08</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">08</p>
+                <div className="number-name-sub">
+                  <p className="gray">08</p>
+                  <p>EDITORIAL FASHION SHOOT</p>
+                </div>
                 <p>EDITORIAL FASHION SHOOT</p>
+
+                <img
+                  src={FOG}
+                  alt="FOG Work Preview"
+                  className="fog-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>EDITORIAL FASHION SHOOT</p>
 
-              <img
-                src={FOG}
-                alt="FOG Work Preview"
-                className="fog-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>SPEC CAMPAIGN</p>
+                <p>EDITORIAL</p>
+                <p>PHOTOGRAPHY</p>
 
-            <div className="work-type">
-              <p>SPEC CAMPAIGN</p>
-              <p>EDITORIAL</p>
-              <p>PHOTOGRAPHY</p>
+                <img
+                  src={FOG}
+                  alt="FOG Work Preview"
+                  className="fog-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={FOG}
-                alt="FOG Work Preview"
-                className="fog-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/gp25" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">09</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">09</p>
+                <div className="number-name-sub">
+                  <p className="gray">09</p>
+                  <p>'25 GRAND PICNIC EXHIBITION</p>
+                </div>
                 <p>'25 GRAND PICNIC EXHIBITION</p>
+                <video
+                  src={GP25}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                />
               </div>
-              <p>'25 GRAND PICNIC EXHIBITION</p>
-              <video
-                src={GP25}
-                loop
-                autoPlay
-                muted
-                playsInline
-                preload="none"
-              />
-            </div>
 
-            <div className="work-type">
-              <p>VIDEOGRAPHY</p>
-              <p>EDITING</p>
+              <div className="work-type">
+                <p>VIDEOGRAPHY</p>
+                <p>EDITING</p>
 
-              <video
-                src={GP25}
-                loop
-                autoPlay
-                muted
-                playsInline
-                preload="none"
-              />
+                <video
+                  src={GP25}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                />
 
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
+
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/rosmetic" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">10</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">10</p>
+                <div className="number-name-sub">
+                  <p className="gray">10</p>
+                  <p>CLINICAL OPERATIONS</p>
+                </div>
                 <p>CLINICAL OPERATIONS</p>
+                <video
+                  src={Rosmetic}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                />
               </div>
-              <p>CLINICAL OPERATIONS</p>
-              <video
-                src={Rosmetic}
-                loop
-                autoPlay
-                muted
-                playsInline
-                preload="none"
-              />
-            </div>
 
-            <div className="work-type">
-              <p>VIDEOGRAPHY</p>
-              <p>HEALTHCARE</p>
-              <p>CONTENT</p>
+              <div className="work-type">
+                <p>VIDEOGRAPHY</p>
+                <p>HEALTHCARE</p>
+                <p>CONTENT</p>
 
-              <video
-                src={Rosmetic}
-                loop
-                autoPlay
-                muted
-                playsInline
-                preload="none"
-              />
+                <video
+                  src={Rosmetic}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                />
 
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2025</p>
+                </div>
+              </div>
+
+              <div className="work-year">
                 <p>2025</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2025</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/xray" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">11</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">11</p>
+                <div className="number-name-sub">
+                  <p className="gray">11</p>
+                  <p>VISUAL EFFECT EXPERIMENT</p>
+                </div>
                 <p>VISUAL EFFECT EXPERIMENT</p>
+                <video
+                  src={XRay}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                />
               </div>
-              <p>VISUAL EFFECT EXPERIMENT</p>
-              <video
-                src={XRay}
-                loop
-                autoPlay
-                muted
-                playsInline
-                preload="none"
-              />
-            </div>
+              <div className="work-type">
+                <p>VFX</p>
+                <p>EDITING</p>
+                <p>CONTENT</p>
 
-            <div className="work-type">
-              <p>VFX</p>
-              <p>EDITING</p>
-              <p>CONTENT</p>
+                <video
+                  src={XRay}
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="none"
+                />
 
-              <video
-                src={XRay}
-                loop
-                autoPlay
-                muted
-                playsInline
-                preload="none"
-              />
-
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2024</p>
+                </div>
+              </div>
+              <div className="work-year">
                 <p>2024</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2024</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/adidas" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">12</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">12</p>
+                <div className="number-name-sub">
+                  <p className="gray">12</p>
+                  <p>CREATIVE AD CONCEPT</p>
+                </div>
                 <p>CREATIVE AD CONCEPT</p>
+
+                <img
+                  src={Adidas}
+                  alt="Adidas Work Preview"
+                  className="adidas-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>CREATIVE AD CONCEPT</p>
 
-              <img
-                src={Adidas}
-                alt="Adidas Work Preview"
-                className="adidas-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>GRAPHIC DESIGN</p>
+                <p>BRAND CAMPAIGN</p>
+                <p>PRODUCT SHOOT</p>
+                <p>ART DIRECTION</p>
 
-            <div className="work-type">
-              <p>GRAPHIC DESIGN</p>
-              <p>BRAND CAMPAIGN</p>
-              <p>PRODUCT SHOOT</p>
-              <p>ART DIRECTION</p>
+                <img
+                  src={Adidas}
+                  alt="Adidas Work Preview"
+                  className="adidas-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={Adidas}
-                alt="Adidas Work Preview"
-                className="adidas-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2024</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2024</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2024</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/offset24" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">13</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">13</p>
+                <div className="number-name-sub">
+                  <p className="gray">13</p>
+                  <p>'24 CAR CULTURE EXHIBITION</p>
+                </div>
                 <p>'24 CAR CULTURE EXHIBITION</p>
+
+                <img
+                  src={Offset24}
+                  alt="Offset24 Work Preview"
+                  className="offset24-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>'24 CAR CULTURE EXHIBITION</p>
+              <div className="work-type">
+                <p>VISUAL STORYTELLING</p>
+                <p>COMPOSITION</p>
 
-              <img
-                src={Offset24}
-                alt="Offset24 Work Preview"
-                className="offset24-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+                <img
+                  src={Offset24}
+                  alt="Offset24 Work Preview"
+                  className="offset24-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-            <div className="work-type">
-              <p>VISUAL STORYTELLING</p>
-              <p>COMPOSITION</p>
-
-              <img
-                src={Offset24}
-                alt="Offset24 Work Preview"
-                className="offset24-image"
-                loading="lazy"
-                decoding="async"
-              />
-
-              <div className="work-year-type">
+                <div className="work-year-type">
+                  <p>2024</p>
+                </div>
+              </div>
+              <div className="work-year">
                 <p>2024</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2024</p>
-            </div>
+            </motion.div>
           </NavLink>
 
           <hr />
 
           <NavLink to="/works/gtr" className="work-list2">
-            <div className="work-number-name">
-              <p className="gray">14</p>
-              <div className="number-name-sub">
+            <motion.div className="work-list-card" variants={childVariants}>
+              <div className="work-number-name">
                 <p className="gray">14</p>
+                <div className="number-name-sub">
+                  <p className="gray">14</p>
+                  <p>GT-R RELEASE EVENT</p>
+                </div>
                 <p>GT-R RELEASE EVENT</p>
+
+                <img
+                  src={GTR}
+                  alt="GTR Work Preview"
+                  className="gtr-image"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <p>GT-R RELEASE EVENT</p>
 
-              <img
-                src={GTR}
-                alt="GTR Work Preview"
-                className="gtr-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+              <div className="work-type">
+                <p>AUTOMOTIVE</p>
+                <p>PHOTOGRAPHY</p>
+                <p>COMPOSITION</p>
 
-            <div className="work-type">
-              <p>AUTOMOTIVE</p>
-              <p>PHOTOGRAPHY</p>
-              <p>COMPOSITION</p>
+                <img
+                  src={GTR}
+                  alt="GTR Work Preview"
+                  className="gtr-image"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-              <img
-                src={GTR}
-                alt="GTR Work Preview"
-                className="gtr-image"
-                loading="lazy"
-                decoding="async"
-              />
+                <div className="work-year-type">
+                  <p>2024</p>
+                </div>
+              </div>
 
-              <div className="work-year-type">
+              <div className="work-year">
                 <p>2024</p>
               </div>
-            </div>
-
-            <div className="work-year">
-              <p>2024</p>
-            </div>
+            </motion.div>
           </NavLink>
-        </div>
+        </motion.div>
       </div>
     </>
   );

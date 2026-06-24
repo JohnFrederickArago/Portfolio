@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Hero =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4";
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
+
+const Hero = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4",
+);
 
 function GP25_1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +58,7 @@ function GP25_1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={Hero} controls autoPlay />
+            <video src={Hero} controls autoPlay playsInline preload="none" />
           </div>
         </div>
       )}

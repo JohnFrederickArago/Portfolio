@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
 import Hero from "../../../assets/works/The FriEND Game Launch/11.1 - Release.png";
 import FriendImage1 from "../../../assets/works/The FriEND Game Launch/1 - Poster.png";
 import FriendImage2 from "../../../assets/works/The FriEND Game Launch/3 - Meet the Team.png";
@@ -14,30 +15,29 @@ import FriendImage10 from "../../../assets/works/The FriEND Game Launch/Thumbnai
 
 import FriendImage12 from "../../../assets/works/The FriEND Game Launch/Thumbnail - Trailer.jpg";
 
-const FriendVideo1 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224893/7.2_-_Meet_the_Characters_May_zquyki.mp4";
-const FriendVideo2 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224896/7.3_-_Meet_the_Characters_Johnny_o4uegx.mp4";
-const FriendVideo3 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224898/7.1_-_Meet_the_Characters_Louis_gzcflp.mp4";
-const FriendVideo4 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224909/7.4_-_Meet_the_Characters_Richard_ty4gis.mp4";
-const FriendVideo5 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224995/2_-_Teaser_Trailer_nudyom.mp4";
-const FriendVideo6 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782225097/Sequence_01_rbijns.mp4";
-const FriendVideo7 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782225611/10_-_Trailer_1_z4dr5n.mp4";
+const FriendVideo1 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224893/7.2_-_Meet_the_Characters_May_zquyki.mp4",
+);
+const FriendVideo2 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224896/7.3_-_Meet_the_Characters_Johnny_o4uegx.mp4",
+);
+const FriendVideo3 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224898/7.1_-_Meet_the_Characters_Louis_gzcflp.mp4",
+);
+const FriendVideo4 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224909/7.4_-_Meet_the_Characters_Richard_ty4gis.mp4",
+);
+const FriendVideo5 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224995/2_-_Teaser_Trailer_nudyom.mp4",
+);
+const FriendVideo6 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782225097/Sequence_01_rbijns.mp4",
+);
+const FriendVideo7 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782225611/10_-_Trailer_1_z4dr5n.mp4",
+);
 
 function Friend1() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const videos = [
-    { id: 5, src: FriendVideo5 },
-    { id: 6, src: FriendVideo6 },
-    { id: 7, src: FriendVideo7 },
-  ];
-
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
@@ -141,10 +141,10 @@ function Friend1() {
         </div>
 
         <div className="video-list">
-          <video src={FriendVideo1} muted autoPlay loop />
-          <video src={FriendVideo3} muted autoPlay loop />
-          <video src={FriendVideo2} muted autoPlay loop />
-          <video src={FriendVideo4} muted autoPlay loop />
+          <video src={FriendVideo1} muted autoPlay loop preload="none" />
+          <video src={FriendVideo3} muted autoPlay loop preload="none" />
+          <video src={FriendVideo2} muted autoPlay loop preload="none" />
+          <video src={FriendVideo4} muted autoPlay loop preload="none" />
         </div>
 
         <div
@@ -210,7 +210,13 @@ function Friend1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={selectedVideo} controls autoPlay playsInline />
+            <video
+              src={selectedVideo}
+              controls
+              autoPlay
+              playsInline
+              preload="none"
+            />
           </div>
         </div>
       )}

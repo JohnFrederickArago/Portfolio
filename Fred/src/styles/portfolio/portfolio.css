@@ -305,7 +305,6 @@
   z-index: 9999;
 }
 
-/* container no longer tries to shrink-wrap */
 .video-modal-content {
   display: flex;
   align-items: center;
@@ -318,7 +317,6 @@
   max-height: 80vh;
 }
 
-/* video becomes ONLY sizing driver */
 .video-modal-content video {
   display: block;
 
@@ -437,6 +435,10 @@
   }
 
   .video-modal-content {
+    width: min(3000px, 300vw);
+  }
+
+  .video-modal-content .rosmetic-video {
     width: min(3000px, 300vw);
   }
 }

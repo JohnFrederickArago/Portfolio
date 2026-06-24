@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 import Hero from "../../../assets/works/Offset '25 - Photo/Offset2.1.jpg";
 import OffsetImage1 from "../../../assets/works/Offset '25 - Photo/Offset2.2.jpg";
 import OffsetImage2 from "../../../assets/works/Offset '25 - Photo/Offset2.3.jpg";
@@ -7,7 +5,6 @@ import OffsetImage3 from "../../../assets/works/Offset '25 - Photo/Offset2.4.jpg
 import OffsetImage4 from "../../../assets/works/Offset '25 - Photo/Offset2.5.jpg";
 import OffsetImage5 from "../../../assets/works/Offset '25 - Photo/Offset2.6.jpg";
 import OffsetImage6 from "../../../assets/works/Offset '25 - Photo/Offset2.7.jpg";
-import OffsetImage7 from "../../../assets/works/Offset '25 - Photo/Offset2.8.jpg";
 import OffsetImage8 from "../../../assets/works/Offset '25 - Photo/Offset2.9.jpg";
 import OffsetImage9 from "../../../assets/works/Offset '25 - Photo/Offset2.10.jpg";
 import OffsetImage10 from "../../../assets/works/Offset '25 - Photo/Offset2.11.jpg";
@@ -18,8 +15,6 @@ import OffsetImage14 from "../../../assets/works/Offset '25 - Photo/Offset2.15.j
 import OffsetImage15 from "../../../assets/works/Offset '25 - Photo/Offset2.16.jpg";
 
 function Offset1() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="portfolio-container">

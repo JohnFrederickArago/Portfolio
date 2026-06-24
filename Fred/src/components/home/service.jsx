@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import ParagraphReveal from "../../animations/components/ParagraphReveal";
 import PerLetterReveal from "../../animations/components/PerLetterReveal";
 import { staggerParent } from "../../animations/variants/works/staggerParent";

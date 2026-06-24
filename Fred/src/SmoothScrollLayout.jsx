@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Lenis from "lenis";
 import { useLenis } from "./LenisContext";
 
@@ -36,7 +36,7 @@ export default function SmoothScrollLayout({ children }) {
       lenis.destroy();
       setLenis(null);
     };
-  }, []);
+  }, [setLenis]);
 
   return (
     <motion.div

@@ -251,6 +251,10 @@ hr {
   margin-top: 40px;
 }
 
+.work-cards * {
+  cursor: pointer;
+}
+
 .work-item {
   width: 100%;
   display: flex;

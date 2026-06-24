@@ -66,10 +66,16 @@
   margin: 60px 0;
 }
 
-.connected p {
+.connected p,
+.connected a {
   color: var(--color-text-dark);
   font-size: 1.4rem;
   font-family: var(--font-bold);
+}
+
+.connected a {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .socials,

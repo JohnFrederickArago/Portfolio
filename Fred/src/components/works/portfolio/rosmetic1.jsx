@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Hero =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov";
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
+const Hero = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov",
+);
 
 function Rosmetic1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +59,14 @@ function Rosmetic1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={Hero} controls autoPlay />
+            <video
+              src={Hero}
+              controls
+              autoPlay
+              playsInline
+              preload="none"
+              className="rosmetic-video"
+            />
           </div>
         </div>
       )}

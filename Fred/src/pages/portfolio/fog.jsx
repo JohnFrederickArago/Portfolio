@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../components/header";
 import FOG1 from "../../components/works/portfolio/fog1";
 import MoreWorks from "../../components/works/moreWorks";

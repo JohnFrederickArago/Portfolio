@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
 import Hero from "../../../assets/works/Caputo - Photo/Caputo1.jpg";
 import CaputoImage1 from "../../../assets/works/Caputo - Photo/Caputo2.jpg";
 import CaputoImage2 from "../../../assets/works/Caputo - Photo/Caputo3.jpg";
@@ -13,8 +14,9 @@ import CaputoImage9 from "../../../assets/works/Caputo - Photo/Caputo10.jpg";
 import CaputoImage10 from "../../../assets/works/Caputo - Photo/Caputo11.jpg";
 import CaputoImage11 from "../../../assets/works/Caputo - Photo/Caputo12.jpg";
 
-const CaputoVideo =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782066989/Casinetto_x_Caputo_zppaq5.mp4";
+const CaputoVideo = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782066989/Casinetto_x_Caputo_zppaq5.mp4",
+);
 
 function Caputo1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -159,7 +161,13 @@ function Caputo1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={CaputoVideo} controls autoPlay />
+            <video
+              src={CaputoVideo}
+              controls
+              autoPlay
+              playsInline
+              preload="none"
+            />
           </div>
         </div>
       )}

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 import Hero from "../../../assets/works/Adidas Climacool - Photo/Climacool-Design1.jpg";
 import AdidasImage1 from "../../../assets/works/Adidas Climacool - Photo/Climacool1.jpg";
 import AdidasImage2 from "../../../assets/works/Adidas Climacool - Photo/Climacool2.jpg";
@@ -9,8 +7,6 @@ import AdidasImage5 from "../../../assets/works/Adidas Climacool - Photo/Climaco
 import AdidasImage6 from "../../../assets/works/Adidas Climacool - Photo/Print Media.jpg";
 
 function Adidas1() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="portfolio-container">

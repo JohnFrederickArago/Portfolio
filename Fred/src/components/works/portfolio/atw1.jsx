@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 import Hero from "../../../assets/works/ATW - Graphic Design/Post2.jpg";
 import ATWImage1 from "../../../assets/works/ATW - Graphic Design/Brochure1.jpg";
 import ATWImage2 from "../../../assets/works/ATW - Graphic Design/Brochure2.jpg";
@@ -11,8 +9,6 @@ import ATWImage7 from "../../../assets/works/ATW - Graphic Design/Post5.jpg";
 import ATWImage8 from "../../../assets/works/ATW - Graphic Design/Welcome.jpg";
 
 function ATW1() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="portfolio-container">

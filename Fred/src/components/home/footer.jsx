@@ -1,8 +1,6 @@
-import React from "react";
 import Logo from "../../assets/image/Logo-Black.png";
 
 import { NavLink } from "react-router-dom";
-import { childVariants } from "../../animations/variants/works/childVariants";
 
 function Footer() {
   const email = "frederickarago30@gmail.com";
@@ -12,8 +10,6 @@ function Footer() {
   const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
     email,
   )}&su=${subject}&body=${body}`;
-
-  const viewport = { once: true };
 
   return (
     <>
@@ -25,7 +21,7 @@ function Footer() {
 
           <div className="top-footer-text">
             <p>Open to new opportunities and creative collaborations.</p>
-            <p variants={childVariants}>
+            <p>
               <a href={gmailComposeUrl}>frederickarago30@gmail.com</a>
             </p>
           </div>
@@ -40,7 +36,7 @@ function Footer() {
           <div className="placeholder5"></div>
 
           <div className="footer-email">
-            <p variants={childVariants}>
+            <p>
               <a href={gmailComposeUrl}>frederickarago30@gmail.com</a>
             </p>
           </div>

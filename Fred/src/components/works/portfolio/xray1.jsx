@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Hero =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4";
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
+const Hero = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4",
+);
 
 function Xray1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +66,7 @@ function Xray1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={Hero} controls autoPlay />
+            <video src={Hero} controls autoPlay playsInline preload="none" />
           </div>
         </div>
       )}

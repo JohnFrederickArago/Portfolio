@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../components/header";
 import GTR1 from "../../components/works/portfolio/gtr1";
 import MoreWorks from "../../components/works/moreWorks";

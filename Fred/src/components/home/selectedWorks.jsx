@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 import Sisters from "../../assets/works/Sisters - Photo/Sisters1.jpg";

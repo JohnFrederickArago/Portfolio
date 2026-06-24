@@ -1,4 +1,3 @@
-import React, { useMemo } from "react";
 import { NavLink } from "react-router-dom";
 
 import Sisters from "../../assets/works/Sisters - Photo/Sisters1.jpg";
@@ -10,15 +9,19 @@ import Adidas from "../../assets/works/Adidas Climacool - Photo/Climacool-Design
 import ATW from "../../assets/works/ATW - Graphic Design/Post2.jpg";
 import TypeR from "../../assets/works/Flat 12 - Photo/Flat12.11.jpg";
 import FOG from "../../assets/works/FOG State - Photo/Post - Fear of God-04.jpg";
-const GP25 =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4";
+import { getOptimizedVideoSrc } from "../../utils/optimizedVideo";
 import Offset24 from "../../assets/works/Offset '24 - Photo/Offset24.6.jpg";
-const Rosmetic =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov";
 import Friend from "../../assets/works/The FriEND Game Launch/11.1 - Release.png";
-const XRay =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4";
-import { video } from "framer-motion/client";
+
+const GP25 = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224684/Grand_Picnic_25_xykl2b.mp4",
+);
+const Rosmetic = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224728/Rosmetics2_svqzgp.mov",
+);
+const XRay = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782224749/X-ray_Camera_Case_vh1hcg.mp4",
+);
 
 function MoreWorks() {
   const works = [
@@ -32,7 +35,7 @@ function MoreWorks() {
     { img: Hermes, title: "MARINE LIFESTYLE SHOOT", to: "/works/hermes" },
     { img: Offset, title: "'25 CAR CULTURE EXHIBITION", to: "/works/offset" },
     { img: Adidas, title: "CREATIVE AD CONCEPT", to: "/works/adidas" },
-    { img: ATW, title: "MARKETING DESIGN INTER", to: "/works/atw" },
+    { img: ATW, title: "MARKETING DESIGN INTERN", to: "/works/atw" },
     { img: FOG, title: "EDITORIAL FASHION SHOOT", to: "/works/fog" },
     {
       img: Friend,
@@ -50,10 +53,17 @@ function MoreWorks() {
     { video: XRay, title: "VISUAL EFFECT EXPERIMENT", to: "/works/xray" },
   ];
 
-  const randomWorks = useMemo(() => {
-    const shuffled = [...works].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 3);
-  }, []);
+  const getWorkSortKey = (work) =>
+    work.to
+      .split("")
+      .reduce(
+        (hash, character) => (hash * 31 + character.charCodeAt(0)) >>> 0,
+        0,
+      );
+
+  const randomWorks = [...works]
+    .sort((left, right) => getWorkSortKey(left) - getWorkSortKey(right))
+    .slice(0, 3);
 
   return (
     <div className="more-works-container">

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 import Hero from "../../../assets/works/Flat 12 - Photo/Flat12.11.jpg";
 import GTRImage1 from "../../../assets/works/Flat 12 - Photo/Flat12.1.jpg";
 import GTRImage2 from "../../../assets/works/Flat 12 - Photo/Flat12.2.jpg";
@@ -14,8 +12,6 @@ import GTRImage10 from "../../../assets/works/Flat 12 - Photo/Flat12.10.jpg";
 import GTRImage11 from "../../../assets/works/Flat 12 - Photo/Flat12.12.jpg";
 
 function GTR1() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="portfolio-container">

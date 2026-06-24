@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
 import Hero from "../../../assets/works/Hermes Jetski - Photo/Hermes1.jpg";
 import HermesImage1 from "../../../assets/works/Hermes Jetski - Photo/Hermes2.jpg";
 import HermesImage2 from "../../../assets/works/Hermes Jetski - Photo/Hermes3.jpg";
 import HermesImage3 from "../../../assets/works/Hermes Jetski - Photo/Hermes4.jpg";
 import HermesImage4 from "../../../assets/works/Hermes Jetski - Photo/Hermes5.jpg";
 
-const HermesVideo =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782067022/HermesVideo_k5g3bw.mp4";
+const HermesVideo = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782067022/HermesVideo_k5g3bw.mp4",
+);
 
 function Hermes1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +98,13 @@ function Hermes1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={HermesVideo} controls autoPlay />
+            <video
+              src={HermesVideo}
+              controls
+              autoPlay
+              playsInline
+              preload="none"
+            />
           </div>
         </div>
       )}

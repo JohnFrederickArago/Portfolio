@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
+import { getOptimizedVideoSrc } from "../../../utils/optimizedVideo";
 import Hero from "../../../assets/works/Blackline - Photo/Blackline1.jpg";
 import BlacklineImage1 from "../../../assets/works/Blackline - Photo/Blackline2.jpg";
 import BlacklineImage2 from "../../../assets/works/Blackline - Photo/Blackline3.jpg";
@@ -8,8 +9,9 @@ import BlacklineImage4 from "../../../assets/works/Blackline - Photo/Blackline5.
 import BlacklineImage5 from "../../../assets/works/Blackline - Photo/Blackline6.jpg";
 import BlacklineImage6 from "../../../assets/works/Blackline - Photo/Blackline7.jpg";
 
-const BlacklineVideo =
-  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782066950/BlacklineVideo_r11vdm.mp4";
+const BlacklineVideo = getOptimizedVideoSrc(
+  "https://res.cloudinary.com/dc6lbqlfl/video/upload/v1782066950/BlacklineVideo_r11vdm.mp4",
+);
 
 function Blackline1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -118,7 +120,13 @@ function Blackline1() {
             className="video-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <video src={BlacklineVideo} controls autoPlay />
+            <video
+              src={BlacklineVideo}
+              controls
+              autoPlay
+              playsInline
+              preload="none"
+            />
           </div>
         </div>
       )}

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 import Hero from "../../../assets/works/FOG State - Photo/Post - Fear of God-04.jpg";
 import FOGImage1 from "../../../assets/works/FOG State - Photo/Post - Fear of God-01.jpg";
 import FOGImage2 from "../../../assets/works/FOG State - Photo/Post - Fear of God-02.jpg";
@@ -7,8 +5,6 @@ import FOGImage3 from "../../../assets/works/FOG State - Photo/Post - Fear of Go
 import FOGImage4 from "../../../assets/works/FOG State - Photo/Post - Fear of God-05.jpg";
 
 function FOG1() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="portfolio-container">
